@@ -22,6 +22,10 @@ body {
   justify-content: center;
   align-items: center; }
 
+.item {
+  text-decoration: none;
+  color: black; }
+
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -111,6 +115,9 @@ Top
   .p-top__menuBox {
     display: inline-block;
     margin-bottom: 20px; }
+    @media screen and (max-width: 414px) {
+      .p-top__menuBox {
+        text-align: center; } }
   .p-top__icon {
     text-align: center;
     margin-bottom: 60px; }
@@ -141,7 +148,33 @@ Top
   font-size: 18px;
   text-align: center; }
 
-/*========================================
-layout　　
-ページを構成するヘッダーやメインのコンテンツエリアなど共通のブロックスタイル
-========================================*/
+.p-sidebar {
+  width: 235px;
+  height: 100%;
+  background: white;
+  position: fixed;
+  box-shadow: 1px 2px 8px 2px rgba(0, 0, 0, 0.15);
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 100px 30px 30px 30px; }
+  .p-sidebar__title {
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 20px;
+    margin-bottom: 30px; }
+  .p-sidebar__menu {
+    text-align: center; }
+  .p-sidebar__link {
+    margin-bottom: 20px; }
+  .p-sidebar__footer p {
+    font-size: 14px; }
+
+.p-container {
+  position: absolute;
+  top: 100px;
+  left: 35%;
+  width: 600px;
+  min-height: 100%;
+  background: white;
+  box-shadow: 1px 2px 8px 2px rgba(0, 0, 0, 0.15);
+  border-radius: 10px; }

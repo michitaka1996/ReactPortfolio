@@ -46,7 +46,8 @@ $space-xxl:30px;
 $space-3l:40px;
 $space-4l: 60px;
 
-$font-family_top: 'Oswald', sans-serif; 
+$font-family_top: 'Oswald', sans-serif;
+$font-family_sidebar: 'PT Sans Narrow', sans-serif;
 
 // $font-family_retrip: 'Hiragino Kaku Gothic Pro',
 // 'ヒラギノ角ゴ Pro W3',
@@ -80,4 +81,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.item{
+    text-decoration: none;
+    color: black;
 }

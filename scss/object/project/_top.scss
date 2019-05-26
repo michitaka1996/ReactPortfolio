@@ -40,6 +40,9 @@ Top
     &__menuBox {
         display: inline-block;
         margin-bottom: 20px;
+        @include mq(){
+            text-align: center;
+        }
     }
 
     &__icon {

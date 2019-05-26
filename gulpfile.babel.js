@@ -34,5 +34,3 @@ gulp.task('default', ['build', 'browser-sync'], function(){
   gulp.watch("./dist/*/*.+(js|css)", ['bs-reload']);
   gulp.watch("./dist/*/*/*.+(js|css)", ['bs-reload']);
 });
-
-
