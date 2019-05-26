@@ -1,3 +1,17 @@
 //各scssを読み込む
 @import 'foundation/_base.scss';
-@import 'foundation/_reset.scss';       
+@import 'foundation/_reset.scss'; 
+@import 'object/component/_icon.scss';
+@import 'object/project/_top.scss';
+
+
+
+
+
+
+
+
+/*========================================
+layout　　
+ページを構成するヘッダーやメインのコンテンツエリアなど共通のブロックスタイル
+========================================*/

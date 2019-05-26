@@ -3,7 +3,7 @@
 設定
 ========================================*/
 /*========================================
-base
+base   デフォルト設定
 ========================================*/
 html,
 body {
@@ -20,8 +20,7 @@ body {
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
-  align-items: center;
-  opacity: 0.2; }
+  align-items: center; }
 
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
@@ -69,3 +68,80 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0; }
+
+/*========================================
+icon
+小さくてアイコン、パーツ　 
+Githubのアイコンのスタイル
+========================================*/
+.fa-github {
+  font-family: FontAwesome; }
+
+.github-link {
+  text-decoration: none;
+  color: #444; }
+
+/*========================================
+Top
+========================================*/
+.p-top {
+  font-size: 28px;
+  color: #333333;
+  position: absolute;
+  top: 25%;
+  animation: fadeIn 7s ease 2s 1 normal;
+  -webkit-animation: fadeIn 7s ease 0.1s 1 normal; }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+  .p-top__title {
+    font-size: 55px;
+    font-family: "Oswald", sans-serif;
+    text-align: center;
+    margin-bottom: 40px; }
+  .p-top__menuBox {
+    display: inline-block;
+    margin-bottom: 20px; }
+  .p-top__icon {
+    text-align: center;
+    margin-bottom: 60px; }
+
+.menu__item {
+  display: inline-block;
+  position: relative;
+  text-decoration: none; }
+  .menu__item .menu__link {
+    text-decoration: none;
+    color: #333333;
+    font-weight: lighter;
+    font-size: 24px;
+    margin: 0 20px; }
+    .menu__item .menu__link::after {
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      content: '';
+      background: #4B0082;
+      height: 2px;
+      transition: .5s all;
+      width: 0; }
+    .menu__item .menu__link:hover::after {
+      width: 100%; }
+
+.footer {
+  font-size: 18px;
+  text-align: center; }
+
+/*========================================
+layout　　
+ページを構成するヘッダーやメインのコンテンツエリアなど共通のブロックスタイル
+========================================*/

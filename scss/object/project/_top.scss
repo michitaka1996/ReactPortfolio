@@ -1,0 +1,85 @@
+/*========================================
+Top
+========================================*/
+//トップタイトル
+.p-top {
+    font-size: $font-size-xxl;
+    color: $font-color_default;
+    position: absolute;
+    top: 25%;
+    animation: fadeIn 7s ease 2s 1 normal;
+    -webkit-animation: fadeIn 7s ease 0.1s 1 normal;
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0
+        }
+
+        100% {
+            opacity: 1
+        }
+    }
+
+    @-webkit-keyframes fadeIn {
+        0% {
+            opacity: 0
+        }
+
+        100% {
+            opacity: 1
+        }
+    }
+
+    &__title {
+        font-size: $font-size-5l;
+        font-family: $font-family_top;
+        text-align: center;
+        margin-bottom: $space-3l;
+    }
+
+    &__menuBox {
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+
+    &__icon {
+        text-align: center;
+        margin-bottom: $space-4l;
+    }
+}
+
+//トップメニュー
+.menu__item {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+
+    .menu__link {
+        text-decoration: none;
+        color: $font-color_default;
+        font-weight: lighter;
+        font-size: $font-size-xl;
+        margin: 0 20px;
+
+        &::after {
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            content: '';
+            background: #4B0082;
+            height: 2px;
+            transition: .5s all;
+            width: 0;
+        }
+
+        &:hover::after {
+            width: 100%;
+        }
+    }
+
+}
+
+.footer {
+    font-size: $font-size-m;
+    text-align: center;
+}

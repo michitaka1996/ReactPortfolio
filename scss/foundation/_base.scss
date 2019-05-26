@@ -17,12 +17,11 @@ $breakpoints:('sm': 'screen and (max-width: 414px)',
 }
 
 //メインカラー　サブカラー
-$font-color_default: #777;
+$font-color_default: #333333	;
 $font-color_sub: #e37b89; // TODO:リファクタ必要
 $font-color-white: white;
 $bg-color_gray: #f8f7fc;
 
-//ピクセル
 //site-width
 //フォントサイズ 大中小 デフォルト
 //大 l xl xxl 3l
@@ -34,9 +33,10 @@ $font-size-l:20px;
 $font-size-xl:24px;
 $font-size-xxl:28px;
 $font-size-3l:38px;
+$font-size-4l: 45px;
+$font-size-5l: 55px;
 
-
-//スペース　大中小
+//スペース　大中小 marginやpaddingに使う
 //大 l xl xxl 3l
 $space-s:5px;
 $space-m:10px;
@@ -44,28 +44,23 @@ $space-l:15px;
 $space-xl:20px;
 $space-xxl:30px;
 $space-3l:40px;
+$space-4l: 60px;
 
+$font-family_top: 'Oswald', sans-serif; 
 
-$font-family_corp: 'Amatic SC',
-cursive;
-$font-family_retrip: 'Hiragino Kaku Gothic Pro',
-'ヒラギノ角ゴ Pro W3',
-メイリオ,
-Meiryo,
-'ＭＳ Ｐゴシック',
-sans-serif;
-
-
-
-
-
+// $font-family_retrip: 'Hiragino Kaku Gothic Pro',
+// 'ヒラギノ角ゴ Pro W3',
+// メイリオ,
+// Meiryo,
+// 'ＭＳ Ｐゴシック',
+// sans-serif;
 
 
 
 
 
 /*========================================
-base
+base   デフォルト設定
 ========================================*/
 html,
 body {
@@ -85,5 +80,4 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0.2;
 }
