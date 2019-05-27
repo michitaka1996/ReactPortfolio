@@ -7,6 +7,13 @@ Top
     color: $font-color_default;
     position: absolute;
     top: 25%;
+    left: 34%;
+    transform: translateY(0);
+    transition: transform 4s;
+    @include mq() {
+        left: 0;
+    }
+
     animation: fadeIn 7s ease 2s 1 normal;
     -webkit-animation: fadeIn 7s ease 0.1s 1 normal;
 
@@ -40,8 +47,10 @@ Top
     &__menuBox {
         display: inline-block;
         margin-bottom: 20px;
-        @include mq(){
+
+        @include mq() {
             text-align: center;
+            display: block;
         }
     }
 

@@ -18,21 +18,25 @@ article
     border-radius: 10px;
     box-sizing: border-box;
     padding: 60px;
+    margin-bottom: 80px;
 
-    &__title{
-      font-family: $font-family_sidebar;
-      font-size:   $font-size-xl;
-      color: $font-color-content;
-      margin-bottom: 60px;
-    }
-    &__contents{
-        box-sizing: border-box;
-        padding-left: 50px; 
+    &__title {
+        font-family: $font-family_sidebar;
+        font-size: $font-size-xl;
+        color: $font-color-content;
         margin-bottom: 60px;
-        h2{
+    }
+
+    &__contents {
+        box-sizing: border-box;
+        padding-left: 50px;
+        margin-bottom: 60px;
+
+        h2 {
             margin-bottom: 20px;
         }
-        p{
+
+        p {
             color: $font-color-text;
             font-size: $font-size-s;
             line-height: 1.2em;
