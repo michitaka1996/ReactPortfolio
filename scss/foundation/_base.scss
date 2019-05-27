@@ -17,10 +17,10 @@ $breakpoints:('sm': 'screen and (max-width: 414px)',
 }
 
 //メインカラー　サブカラー
-$font-color_default: #333333	;
-$font-color_sub: #e37b89; // TODO:リファクタ必要
+$font-color_default: #333333;
 $font-color-white: white;
-$bg-color_gray: #f8f7fc;
+$font-color-content: #7B68EE;
+$font-color-text: #666666;
 
 //site-width
 //フォントサイズ 大中小 デフォルト

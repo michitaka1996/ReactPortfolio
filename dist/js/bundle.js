@@ -524,6 +524,8 @@ module.exports = g;
 "use strict";
 
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
@@ -541,19 +543,24 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 //大元のポートフォリオの画面
-var MyPort = function (_React$Component) {
-    _inherits(MyPort, _React$Component);
+var MyApp = function (_React$Component) {
+    _inherits(MyApp, _React$Component);
 
-    function MyPort() {
-        _classCallCheck(this, MyPort);
+    function MyApp() {
+        _classCallCheck(this, MyApp);
 
-        var _this = _possibleConstructorReturn(this, (MyPort.__proto__ || Object.getPrototypeOf(MyPort)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (MyApp.__proto__ || Object.getPrototypeOf(MyApp)).call(this, props));
 
         _this.state = {};
         return _this;
     }
 
-    return MyPort;
+    _createClass(MyApp, [{
+        key: 'render',
+        value: function render() {}
+    }]);
+
+    return MyApp;
 }(_react2.default.Component);
 
 /***/ }),
