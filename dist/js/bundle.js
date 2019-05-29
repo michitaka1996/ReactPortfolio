@@ -1287,12 +1287,19 @@ var App = function (_React$Component) {
             isContent: false
         };
         _this.prevTop = _this.prevTop.bind(_this);
+        _this.overState = _this.overState.bind(_this);
 
         _this.apprSidebar = _this.apprSidebar.bind(_this);
         _this.apprAbout = _this.apprAbout.bind(_this);
         _this.apprSkills = _this.apprSkills.bind(_this);
         _this.apprWork = _this.apprWork.bind(_this);
         _this.apprBlog = _this.apprBlog.bind(_this);
+
+        _this.changeAbout = _this.changeAbout.bind(_this);
+        _this.changeSkills = _this.changeSkills.bind(_this);
+        _this.changeWork = _this.changeWork.bind(_this);
+        _this.changeBlog = _this.changeBlog.bind(_this);
+
         return _this;
     }
 
@@ -1300,8 +1307,7 @@ var App = function (_React$Component) {
         key: 'prevTop',
         value: function prevTop() {
             //sidebarの非表示  sidebarでタイトル部分をおした時
-            console.log('uu');
-
+            console.log('prevTop:サイドバーのタイトルをクリックしたのでtopを表示させ戻ります');
             var sidebar = $('.p-sidebar__title').parent(); //サイドバー
             $(sidebar).attr('class', 'p-sidebar__hide');
             $(sidebar).delay(2000).queue(function () {
@@ -1310,49 +1316,125 @@ var App = function (_React$Component) {
 
             var content = $('.p-container'); //コンテンツ
             $(content).attr('class', 'p-container__hide'); //idに変更させること
-            console.log('おお');
             $(content).delay(2000).queue(function () {
                 $(this).hide();
             });
 
-            var top = $('.p-top'); //トップページ
-            $(top).attr('class', 'p-top__show').show();
+            $('#js-top').css({ transform: 'translateY(0)' });
+            // この時のisTop true
+            // この時のisSide false なので反転させる
+            // $(function () {
+            //     setTimeout(function () {
+            //     //   this.setState(prevState => ({
+            //     //     //   isTop: !prevState.isTop,
+            //     //     //   isSide: !prevState.isSide
+            //     //   }));
+            //     //   this.setState({ isTop: true, isSide: false });
+            //     }, 1000);
+            // });
+            // const top = $('.p-top'); //トップページ
+            // $(top).attr('class', 'p-top__show').show();
+
+            this.overState();
+
+            // this.setState({ isTop: true, isSide: false, isAbout: false, isSkills: false, isWork: false, isBlog: false});
+            // this.setState(prevState => ({
+            //           isTop: !prevState.isTop,
+            //           isSide: !prevState.isSide
+            // }));
+            // this.setState({ isSide: false });
             // this.setState({ isSide: false, isContent: false });
+            console.log('prevTop: 現在のisTop', this.state.isTop);
+            console.log('prevTop: 現在のisSide', this.state.isSide);
+            console.log('prevTop: 現在のisContent', this.state.isContent);
+        }
+    }, {
+        key: 'overState',
+        value: function overState() {
+            this.setState({ isTop: true, isSide: false, isAbout: false, isSkills: false, isWork: false, isBlog: false });
         }
     }, {
         key: 'apprSidebar',
         value: function apprSidebar() {
+            console.log('sidebarを呼びます');
+            this.setState({ isTop: false });
             this.setState({ isContent: true });
             this.setState({ isSide: true });
+            $('#js-sidebar').css({ display: 'block' });
         }
     }, {
         key: 'apprAbout',
         value: function apprAbout() {
+            console.log('aboutを呼びます');
+            this.setState({ isTop: false });
             this.setState({ isContent: true });
             this.setState({ isAbout: true });
+            // console.log('この時のisAbout', this.state.isAbout);
         }
     }, {
         key: 'apprSkills',
         value: function apprSkills() {
+            console.log('skillsを呼びます');
+            this.setState({ isTop: false });
             this.setState({ isContent: true });
             this.setState({ isSkills: true });
         }
     }, {
         key: 'apprWork',
         value: function apprWork() {
+            console.log('workを呼びます');
+            this.setState({ isTop: false });
             this.setState({ isContent: true });
             this.setState({ isWork: true });
         }
     }, {
         key: 'apprBlog',
         value: function apprBlog() {
+            console.log('blogを呼びます');
+            this.setState({ isTop: false });
             this.setState({ isContent: true });
             this.setState({ isBlog: true });
         }
     }, {
+        key: 'changeAbout',
+        value: function changeAbout(e) {
+            e.preventDefault();
+            console.log('aboutにチェンジします');
+            this.setState({ isTop: false, isAbout: true, isSkills: false, isWork: false, isBlog: false });
+        }
+    }, {
+        key: 'changeSkills',
+        value: function changeSkills(e) {
+            e.preventDefault();
+            console.log('skillsにチェンジします');
+            this.setState({ isTop: false, isAbout: false, isSkills: true, isWork: false, isBlog: false });
+        }
+    }, {
+        key: 'changeWork',
+        value: function changeWork(e) {
+            e.preventDefault();
+            console.log('workにチェンジします');
+            this.setState({ isTop: false, isAbout: false, isSkills: false, isWork: true, isBlog: false });
+        }
+    }, {
+        key: 'changeBlog',
+        value: function changeBlog(e) {
+            e.preventDefault();
+            console.log('blogにチェンジします');
+            this.setState({ isTop: false, isAbout: false, isSkills: false, isWork: false, isBlog: true });
+        }
+    }, {
         key: 'render',
         value: function render() {
-            var sidebar = this.state.isSide ? _react2.default.createElement(
+            console.log('render: 現在のisTop', this.state.isTop);
+            console.log('render: 現在のisSide', this.state.isSide);
+            console.log('render: 現在のisContent', this.state.isContent);
+            console.log('render: 現在のisAbout', this.state.isAbout);
+            console.log('render: 現在のisSkills', this.state.isSkills);
+            console.log('render: 現在のisWork', this.state.isWork);
+            console.log('render: 現在のisBlog', this.state.isBlog);
+
+            var sidebar = this.state.isContent && this.state.isSide ? _react2.default.createElement(
                 'section',
                 { id: 'js-sidebar', className: 'p-sidebar' },
                 _react2.default.createElement(
@@ -1368,7 +1450,7 @@ var App = function (_React$Component) {
                         { className: 'p-sidebar__link' },
                         _react2.default.createElement(
                             'a',
-                            { className: 'item p-sidebar__item', href: '' },
+                            { onClick: this.changeAbout, className: 'item p-sidebar__item', href: '' },
                             'About'
                         )
                     ),
@@ -1377,7 +1459,7 @@ var App = function (_React$Component) {
                         { className: 'p-sidebar__link' },
                         _react2.default.createElement(
                             'a',
-                            { className: 'item p-sidebar__item', href: '' },
+                            { onClick: this.changeSkills, className: 'item p-sidebar__item', href: '' },
                             'Skills'
                         )
                     ),
@@ -1386,7 +1468,7 @@ var App = function (_React$Component) {
                         { className: 'p-sidebar__link' },
                         _react2.default.createElement(
                             'a',
-                            { className: 'item p-sidebar__item', href: '' },
+                            { onClick: this.changeWork, className: 'item p-sidebar__item', href: '' },
                             'Works'
                         )
                     ),
@@ -1395,7 +1477,7 @@ var App = function (_React$Component) {
                         { className: 'p-sidebar__link' },
                         _react2.default.createElement(
                             'a',
-                            { className: 'item p-sidebar__item', href: '' },
+                            { onClick: this.changeBlog, className: 'item p-sidebar__item', href: '' },
                             'Blog'
                         )
                     )
@@ -1420,9 +1502,9 @@ var App = function (_React$Component) {
                 )
             ) : null;
 
-            var about = this.state.isAbout ? _react2.default.createElement(
+            var about = this.state.isContent && this.state.isAbout ? _react2.default.createElement(
                 'article',
-                { className: 'p-container' },
+                { id: 'js-article__about', className: 'p-container' },
                 _react2.default.createElement(
                     'h1',
                     { className: 'p-container__title' },
@@ -1472,9 +1554,9 @@ var App = function (_React$Component) {
                 )
             ) : null;
 
-            var skills = this.state.isSkills ? _react2.default.createElement(
+            var skills = this.state.isContent && this.state.isSkills ? _react2.default.createElement(
                 'article',
-                { className: 'p-container' },
+                { id: 'js-article__skills', className: 'p-container' },
                 _react2.default.createElement(
                     'h1',
                     { className: 'p-container__title' },
@@ -1524,19 +1606,19 @@ var App = function (_React$Component) {
                 )
             ) : null;
 
-            var works = this.state.isWork ? _react2.default.createElement(
+            var works = this.state.isContent && this.state.isWork ? _react2.default.createElement(
                 'article',
-                { 'class': 'p-container' },
+                { id: 'js-article__work', className: 'p-container' },
                 _react2.default.createElement(
                     'h1',
-                    { 'class': 'p-container__title' },
+                    { className: 'p-container__title' },
                     'Works'
                 )
             ) : null;
 
-            var blog = this.state.isBlog ? _react2.default.createElement(
+            var blog = this.state.isContent && this.state.isBlog ? _react2.default.createElement(
                 'article',
-                { className: 'p-container' },
+                { id: 'js-article__blog', className: 'p-container' },
                 _react2.default.createElement(
                     'h1',
                     { className: 'p-container__title' },
@@ -26433,13 +26515,15 @@ var Top = function (_React$Component) {
         key: 'aboutApear',
         value: function aboutApear(e) {
             //クリックされたら   -->topを上に移動->isTop,isSideをtrueに apearContent()を呼ぶ 　this.props.hideを設定(コンポーネントでtrueに sidebarは隠れる)
+            console.log('aboutがクリックされました');
             e.preventDefault();
-            console.log('上に移動させます');
             console.log('stateのisTopをfalseにします');
             this.setState({ isTop: false });
             console.log('stateのisSideをtrueにします');
             this.setState({ isSide: true });
             $('#js-top').css({ transform: 'translateY(-1000px)' });
+            // const top = $('#js-top');
+            // $(top).attr('id', '#js-top__up');
             console.log('サイドバーを呼ぶためのメソッドapprSidebarを呼びます');
             this.props.apprSidebar(); //このapprsidebarで、sidebarコンポーネントに渡す
             this.props.apprAbout();
@@ -26448,6 +26532,7 @@ var Top = function (_React$Component) {
         key: 'skillsApear',
         value: function skillsApear(e) {
             //クリックされたら   -->topを上に移動->isTop,isSideをtrueに apearContent()を呼ぶ 　this.props.hideを設定(コンポーネントでtrueに sidebarは隠れる)
+            console.log('skillsがクリックされました。');
             e.preventDefault();
             console.log('上に移動させます');
             console.log('stateのisTopをfalseにします');
@@ -26463,6 +26548,7 @@ var Top = function (_React$Component) {
         key: 'workApear',
         value: function workApear(e) {
             //クリックされたら   -->topを上に移動->isTop,isSideをtrueに apearContent()を呼ぶ 　this.props.hideを設定(コンポーネントでtrueに sidebarは隠れる)
+            console.log('workがクリックされました');
             e.preventDefault();
             console.log('上に移動させます');
             console.log('stateのisTopをfalseにします');
@@ -26478,6 +26564,7 @@ var Top = function (_React$Component) {
         key: 'blogApear',
         value: function blogApear(e) {
             //クリックされたら   -->topを上に移動->isTop,isSideをtrueに apearContent()を呼ぶ 　this.props.hideを設定(コンポーネントでtrueに sidebarは隠れる)
+            console.log('blogがクリックされましたs');
             e.preventDefault();
             console.log('上に移動させます');
             console.log('stateのisTopをfalseにします');
@@ -26516,7 +26603,7 @@ var Top = function (_React$Component) {
                                 { className: 'item menu__item' },
                                 _react2.default.createElement(
                                     'a',
-                                    { id: 'js-about-click', 'data-about': 'about', onClick: this.aboutApear, className: 'menu__link', href: '' },
+                                    { onClick: this.aboutApear, className: 'menu__link', href: '' },
                                     'About'
                                 )
                             ),
@@ -26525,7 +26612,7 @@ var Top = function (_React$Component) {
                                 { className: 'item menu__item' },
                                 _react2.default.createElement(
                                     'a',
-                                    { id: 'js-skills-click', 'data-skills': 'skills', onClick: this.skillsApear, className: 'menu__link', href: '' },
+                                    { onClick: this.skillsApear, className: 'menu__link', href: '' },
                                     'Skills'
                                 )
                             ),
@@ -26534,7 +26621,7 @@ var Top = function (_React$Component) {
                                 { className: 'item menu__item' },
                                 _react2.default.createElement(
                                     'a',
-                                    { id: 'js-works-click', onClick: this.workApear, className: 'menu__link', href: '' },
+                                    { onClick: this.workApear, className: 'menu__link', href: '' },
                                     'Works'
                                 )
                             ),
@@ -26543,7 +26630,7 @@ var Top = function (_React$Component) {
                                 { className: 'item menu__item' },
                                 _react2.default.createElement(
                                     'a',
-                                    { id: 'js-blog-click', onClick: this.blogApear, className: 'menu__link', href: '' },
+                                    { onClick: this.blogApear, className: 'menu__link', href: '' },
                                     'Blog'
                                 )
                             )

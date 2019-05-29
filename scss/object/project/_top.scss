@@ -10,6 +10,7 @@ Top
     left: 34%;
     transform: translateY(0);
     transition: transform 4s;
+
     @include mq() {
         left: 0;
     }
@@ -96,26 +97,58 @@ Top
     0% {
         opacity: 1;
         /* 透明 */
-        transform: translateY(-1000px);
+        transform: translateY(0);
         /* X軸方向に50px */
     }
 
     100% {
         opacity: 0;
         /* 不透明 */
-        transform: translateY(0px);
+        transform: translateY(500px);
     }
 }
-.p-top__show{
+
+.p-top__show {
     font-size: $font-size-xxl;
     color: $font-color_default;
     position: absolute;
     top: 25%;
     left: 34%;
-    animation-duration: 3s;
+    animation-duration: 1.5s;
     animation-name: UptoBottom;
     animation-iteration-count: none;
 }
+
+
+
+
+
+
+
+// @keyframes BottomtoUp {
+//     0% {
+//         opacity: 1;
+//         /* 透明 */
+//         transform: translateY(0);
+//         /* X軸方向に50px */
+//     }
+
+//     100% {
+//         opacity: 0;
+//         /* 不透明 */
+//         transform: translateY(1000px);
+//     }
+// }
+// #js-top__up {
+//     font-size: $font-size-xxl;
+//     color: $font-color_default;
+//     position: absolute;
+//     top: 25%;
+//     left: 34%;
+//     animation-duration: 2s;
+//     animation-name: BottomtoUp;
+//     animation-iteration-count: none;
+// }
 
 
 

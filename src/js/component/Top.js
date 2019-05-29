@@ -21,18 +21,21 @@ export default class Top extends React.Component{
         this.blogApear = this.blogApear.bind(this);
     }
     aboutApear(e) { //クリックされたら   -->topを上に移動->isTop,isSideをtrueに apearContent()を呼ぶ 　this.props.hideを設定(コンポーネントでtrueに sidebarは隠れる)
+        console.log('aboutがクリックされました');
         e.preventDefault();
-        console.log('上に移動させます');
         console.log('stateのisTopをfalseにします');
         this.setState({ isTop: false });
         console.log('stateのisSideをtrueにします');
         this.setState({ isSide: true });
         $('#js-top').css({ transform: 'translateY(-1000px)' });
+        // const top = $('#js-top');
+        // $(top).attr('id', '#js-top__up');
         console.log('サイドバーを呼ぶためのメソッドapprSidebarを呼びます');
         this.props.apprSidebar(); 　　　//このapprsidebarで、sidebarコンポーネントに渡す
         this.props.apprAbout();
     }
     skillsApear(e) { //クリックされたら   -->topを上に移動->isTop,isSideをtrueに apearContent()を呼ぶ 　this.props.hideを設定(コンポーネントでtrueに sidebarは隠れる)
+        console.log('skillsがクリックされました。');
         e.preventDefault();
         console.log('上に移動させます');
         console.log('stateのisTopをfalseにします');
@@ -45,6 +48,7 @@ export default class Top extends React.Component{
         this.props.apprSkills();
     }
      workApear(e) { //クリックされたら   -->topを上に移動->isTop,isSideをtrueに apearContent()を呼ぶ 　this.props.hideを設定(コンポーネントでtrueに sidebarは隠れる)
+        console.log('workがクリックされました');
         e.preventDefault();
         console.log('上に移動させます');
         console.log('stateのisTopをfalseにします');
@@ -57,6 +61,7 @@ export default class Top extends React.Component{
         this.props.apprWork();
      }
     blogApear(e) { //クリックされたら   -->topを上に移動->isTop,isSideをtrueに apearContent()を呼ぶ 　this.props.hideを設定(コンポーネントでtrueに sidebarは隠れる)
+        console.log('blogがクリックされましたs');
         e.preventDefault();
         console.log('上に移動させます');
         console.log('stateのisTopをfalseにします');
@@ -77,10 +82,10 @@ export default class Top extends React.Component{
                 <h1 className="p-top__title">MichiTaka's &nbsp; Portfolio</h1>
                 <div className="p-top__menuBox">
                     <ul className="p-top__menu">
-                        <li className="item menu__item"><a id="js-about-click" data-about="about" onClick={this.aboutApear}  className="menu__link" href="">About</a ></li>
-                        <li className="item menu__item"><a id="js-skills-click" data-skills="skills" onClick={this.skillsApear}  className="menu__link" href="">Skills</a ></li>
-                        <li className="item menu__item"><a id="js-works-click" onClick={this.workApear}  className="menu__link" href="">Works</a ></li>
-                        <li className="item menu__item"><a id="js-blog-click" onClick={this.blogApear}  className="menu__link" href="">Blog</a ></li>
+                        <li className="item menu__item"><a onClick={this.aboutApear}  className="menu__link" href="">About</a ></li>
+                        <li className="item menu__item"><a onClick={this.skillsApear} className="menu__link" href="">Skills</a ></li>
+                        <li className="item menu__item"><a onClick={this.workApear}  className="menu__link" href="">Works</a ></li>
+                        <li className="item menu__item"><a onClick={this.blogApear}  className="menu__link" href="">Blog</a ></li>
                     </ul>
                 </div>
                 <div className="p-top__icon">
