@@ -1,4 +1,4 @@
-@keyframes RightToLeft {
+@keyframes LefttoRight {
     0% {
         opacity: 0;
         /* 透明 */
@@ -25,18 +25,17 @@
     padding: 100px 30px 30px 30px;
 
     animation-duration: 4s;
-    animation-name: RightToLeft;
+    animation-name: LefttoRight;
     animation-iteration-count: none;
-    
-
 
     &__title {
         font-family: $font-family_sidebar;
         font-size: 28px;
         text-align: center;
         margin-bottom: 40px;
-        &:hover{
-           cursor: pointer;
+
+        &:hover {
+            cursor: pointer;
         }
     }
 
@@ -52,4 +51,35 @@
         font-size: $font-size-s;
         text-align: center;
     }
+}
+
+@keyframes RighttoLeft {
+    0% {
+        opacity: 1;
+        /* 透明 */
+        transform: translateX(0px);
+        /* X軸方向に50px */
+    }
+
+    100% {
+        opacity: 0;
+        /* 不透明 */
+        transform: translateX(-300px);
+    }
+}
+
+.p-sidebar__hide {
+    width: 300px;
+    height: 100%;
+    background: white;
+    position: fixed;
+    box-shadow: 1px 2px 8px 2px rgba(0, 0, 0, .15);
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 100px 30px 30px 30px;
+    animation-duration: 2s;
+    animation-name: RighttoLeft;
+    animation-iteration-count: none;
+    overflow: hidden;
 }

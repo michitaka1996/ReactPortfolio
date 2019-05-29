@@ -1265,6 +1265,9 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 // import Content from './component/Content';
 
 
+//サイドバーのタイトルをクリックすると、アニメーションで
+
+
 var App = function (_React$Component) {
     _inherits(App, _React$Component);
 
@@ -1279,7 +1282,9 @@ var App = function (_React$Component) {
             isAbout: false,
             isSkills: false,
             isWork: false,
-            isBlog: false
+            isBlog: false,
+
+            isContent: false
         };
         _this.prevTop = _this.prevTop.bind(_this);
 
@@ -1294,31 +1299,54 @@ var App = function (_React$Component) {
     _createClass(App, [{
         key: 'prevTop',
         value: function prevTop() {
-            console.log('じj');
+            //sidebarの非表示  sidebarでタイトル部分をおした時
+            console.log('uu');
+
+            var sidebar = $('.p-sidebar__title').parent(); //サイドバー
+            $(sidebar).attr('class', 'p-sidebar__hide');
+            $(sidebar).delay(2000).queue(function () {
+                $(this).hide();
+            });
+
+            var content = $('.p-container'); //コンテンツ
+            $(content).attr('class', 'p-container__hide'); //idに変更させること
+            console.log('おお');
+            $(content).delay(2000).queue(function () {
+                $(this).hide();
+            });
+
+            var top = $('.p-top'); //トップページ
+            $(top).attr('class', 'p-top__show').show();
+            // this.setState({ isSide: false, isContent: false });
         }
     }, {
         key: 'apprSidebar',
         value: function apprSidebar() {
+            this.setState({ isContent: true });
             this.setState({ isSide: true });
         }
     }, {
         key: 'apprAbout',
         value: function apprAbout() {
+            this.setState({ isContent: true });
             this.setState({ isAbout: true });
         }
     }, {
         key: 'apprSkills',
         value: function apprSkills() {
+            this.setState({ isContent: true });
             this.setState({ isSkills: true });
         }
     }, {
         key: 'apprWork',
         value: function apprWork() {
+            this.setState({ isContent: true });
             this.setState({ isWork: true });
         }
     }, {
         key: 'apprBlog',
         value: function apprBlog() {
+            this.setState({ isContent: true });
             this.setState({ isBlog: true });
         }
     }, {

@@ -7,6 +7,9 @@ import _ from 'lodash';
 import { log } from 'util';
 
 
+//サイドバーのタイトルをクリックすると、アニメーションで
+
+
 class App extends React.Component{
     constructor(props) {
         super(props);
@@ -16,7 +19,9 @@ class App extends React.Component{
             isAbout: false,
             isSkills: false,
             isWork: false,
-            isBlog: false
+            isBlog: false,
+
+            isContent: false
         };
         this.prevTop = this.prevTop.bind(this);
 
@@ -26,24 +31,48 @@ class App extends React.Component{
         this.apprWork = this.apprWork.bind(this);
         this.apprBlog = this.apprBlog.bind(this);
     }
-    prevTop() {
-        console.log('じj');
+    prevTop() { //sidebarの非表示  sidebarでタイトル部分をおした時
+        console.log('uu');
+
+        const sidebar  = $('.p-sidebar__title').parent();   //サイドバー
+        $(sidebar).attr('class', 'p-sidebar__hide');
+        $(sidebar).delay(2000).queue(function(){
+            $(this).hide();
+        });
+        
+        const content = $('.p-container'); 　//コンテンツ
+        $(content).attr('class', 'p-container__hide');  //idに変更させること
+        console.log('おお');
+        $(content).delay(2000).queue(function(){
+            $(this).hide();
+        });
+
+        const top = $('.p-top'); //トップページ
+        $(top).attr('class', 'p-top__show').show();
+        // this.setState({ isSide: false, isContent: false });
+
     }
     apprSidebar() {
+        this.setState({isContent: true});
         this.setState({ isSide: true });
     }
     apprAbout() {
+        this.setState({isContent: true});
         this.setState({ isAbout: true });
     }
     apprSkills() {
+        this.setState({isContent: true});
         this.setState({ isSkills: true });
     }
     apprWork() {
+        this.setState({isContent: true});
         this.setState({ isWork: true });
     }
     apprBlog() {
+        this.setState({isContent: true});
         this.setState({ isBlog: true });
     }
+
     render() {
         const sidebar = (this.state.isSide) ?
             <section id="js-sidebar" className="p-sidebar">

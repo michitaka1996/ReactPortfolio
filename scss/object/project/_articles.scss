@@ -32,6 +32,7 @@ article
     box-sizing: border-box;
     padding: 60px;
     margin-bottom: 80px;
+
     animation-duration: 2.5s;
     animation-name: BottomtoUp;
     animation-iteration-count: none;
@@ -58,4 +59,37 @@ article
             line-height: 1.2em;
         }
     }
+}
+
+
+@keyframes UptoBottom {
+    0% {
+        opacity: 1;
+        /* 透明 */
+        transform: translateY(0px);
+        /* X軸方向に50px */
+    }
+
+    100% {
+        opacity: 0;
+        /* 不透明 */
+        transform: translateY(1000px);
+    }
+}
+.p-container__hide{
+    position: absolute;
+    top: 100px;
+    left: 32%;
+    width: 800px;
+    min-height: 100%;
+    background: white;
+    box-shadow: 1px 2px 8px 2px rgba(0, 0, 0, .15);
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 60px;
+    margin-bottom: 80px;
+
+    animation-duration: 4s;
+    animation-name: UptoBottom;
+    animation-iteration-count: none;
 }

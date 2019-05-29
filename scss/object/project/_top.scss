@@ -91,6 +91,34 @@ Top
 
 }
 
+
+@keyframes UptoBottom {
+    0% {
+        opacity: 1;
+        /* 透明 */
+        transform: translateY(-1000px);
+        /* X軸方向に50px */
+    }
+
+    100% {
+        opacity: 0;
+        /* 不透明 */
+        transform: translateY(0px);
+    }
+}
+.p-top__show{
+    font-size: $font-size-xxl;
+    color: $font-color_default;
+    position: absolute;
+    top: 25%;
+    left: 34%;
+    animation-duration: 3s;
+    animation-name: UptoBottom;
+    animation-iteration-count: none;
+}
+
+
+
 .footer {
     font-size: $font-size-m;
     text-align: center;

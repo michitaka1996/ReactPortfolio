@@ -77,7 +77,7 @@ export default class Top extends React.Component{
                 <h1 className="p-top__title">MichiTaka's &nbsp; Portfolio</h1>
                 <div className="p-top__menuBox">
                     <ul className="p-top__menu">
-                            <li className="item menu__item"><a id="js-about-click" data-about="about" onClick={this.aboutApear}  className="menu__link" href="">About</a ></li>
+                        <li className="item menu__item"><a id="js-about-click" data-about="about" onClick={this.aboutApear}  className="menu__link" href="">About</a ></li>
                         <li className="item menu__item"><a id="js-skills-click" data-skills="skills" onClick={this.skillsApear}  className="menu__link" href="">Skills</a ></li>
                         <li className="item menu__item"><a id="js-works-click" onClick={this.workApear}  className="menu__link" href="">Works</a ></li>
                         <li className="item menu__item"><a id="js-blog-click" onClick={this.blogApear}  className="menu__link" href="">Blog</a ></li>
