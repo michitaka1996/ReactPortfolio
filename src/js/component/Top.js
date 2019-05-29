@@ -30,26 +30,33 @@ export default class Top extends React.Component{
         this.props.side;
         console.log('サイドバーを呼ぶためのメソッドapprSidebarを呼びます');
         this.props.apprSidebar(); 　　　//このapprsidebarで、sidebarコンポーネントに渡す
+
+        if ($('#js-about-click').click()) {
+            console.log('ちんちん');
+        }
+        if ($('#js-skills-click').click()) {
+            console.log('いのうえ');
+        }
     }
     render() {
         console.log('この時のisTop', this.state.isTop); 
         console.log('この時のisSide', this.state.isSide); 
-        const sidebar = (this.state.isSide) ?
-             <section id="js-sidebar" className="p-sidebar">
-                <h1 className="p-sidebar__title">MichiTaka’s&nbsp;Portofolio</h1>
-                <ul className="p-sidebar__menu">
-                    <li className="p-sidebar__link"><a onClick={this.fadeApear} className="item p-sidebar__item" href="detailMoc.html">About</a></li>
-                    <li className="p-sidebar__link"><a onClick={this.fadeApear} className="item p-sidebar__item" href="">Skills</a></li>
-                    <li className="p-sidebar__link"><a onClick={this.fadeApear} className="item p-sidebar__item" href="">Works</a></li>
-                    <li className="p-sidebar__link"><a onClick={this.fadeApear} className="item p-sidebar__item" href="">Blog</a></li>
-                </ul>
-                <div className="p-top__icon">
-                    <a className="github-link" href="https://github.com/michitaka1996"><i className="fab fa-2x  fa-github"></i></a>
-                </div>
-                <footer className="p-sidebar__footer">
-                    <p>Since2019@Michitaka</p>
-                </footer>
-            </section> : null;
+        // const sidebar = (this.state.isSide) ?
+        //      <section id="js-sidebar" className="p-sidebar">
+        //         <h1 className="p-sidebar__title">MichiTaka’s&nbsp;Portofolio</h1>
+        //         <ul className="p-sidebar__menu">
+        //             <li className="p-sidebar__link"><a onClick={this.fadeApear} className="item p-sidebar__item" href="detailMoc.html">About</a></li>
+        //             <li className="p-sidebar__link"><a onClick={this.fadeApear} className="item p-sidebar__item" href="">Skills</a></li>
+        //             <li className="p-sidebar__link"><a onClick={this.fadeApear} className="item p-sidebar__item" href="">Works</a></li>
+        //             <li className="p-sidebar__link"><a onClick={this.fadeApear} className="item p-sidebar__item" href="">Blog</a></li>
+        //         </ul>
+        //         <div className="p-top__icon">
+        //             <a className="github-link" href="https://github.com/michitaka1996"><i className="fab fa-2x  fa-github"></i></a>
+        //         </div>
+        //         <footer className="p-sidebar__footer">
+        //             <p>Since2019@Michitaka</p>
+        //         </footer>
+        //     </section> : null;
         
         return (
             <div>
@@ -57,10 +64,10 @@ export default class Top extends React.Component{
                 <h1 className="p-top__title">MichiTaka's &nbsp; Portfolio</h1>
                 <div className="p-top__menuBox">
                     <ul className="p-top__menu">
-                        <li className="item menu__item"><a id="js-menu-click" onClick={this.fadeApear}  className="menu__link" href="">About</a ></li>
-                        <li className="item menu__item"><a onClick={this.fadeApear}  className="menu__link" href="">Skills</a ></li>
-                        <li className="item menu__item"><a onClick={this.fadeApear}  className="menu__link" href="">Works</a ></li>
-                        <li className="item menu__item"><a onClick={this.fadeApear}  className="menu__link" href="">Blog</a ></li>
+                        <li className="item menu__item"><a id="js-about-click" data-about="about" onClick={this.fadeApear}  className="menu__link" href="">About</a ></li>
+                        <li className="item menu__item"><a id="js-skills-click" data-skills="skills" onClick={this.fadeApear}  className="menu__link" href="">Skills</a ></li>
+                        <li className="item menu__item"><a id="js-works-click" onClick={this.fadeApear}  className="menu__link" href="">Works</a ></li>
+                        <li className="item menu__item"><a id="js-blog-click" onClick={this.fadeApear}  className="menu__link" href="">Blog</a ></li>
                     </ul>
                 </div>
                 <div className="p-top__icon">
@@ -70,7 +77,7 @@ export default class Top extends React.Component{
                     <p>Since2019@Michitaka</p>
                 </footer>
               </section>
-              {sidebar}
+              {/* {sidebar} */}
             </div>
         );
     }

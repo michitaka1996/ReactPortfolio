@@ -1262,6 +1262,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 // import Sidebar from './component/Sidebar';
+// import Content from './component/Content';
 
 
 //topを表示をした状態からスタート
@@ -1281,7 +1282,12 @@ var App = function (_React$Component) {
 
         var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
 
-        _this.state = {};
+        _this.state = {
+            isTop: true,
+            isSide: false,
+            isAbout: false,
+            isSkills: false
+        };
         _this.apprSidebar = _this.apprSidebar.bind(_this);
         _this.setSidebar = _this.setSidebar.bind(_this);
         return _this;
@@ -1291,18 +1297,204 @@ var App = function (_React$Component) {
         key: 'apprSidebar',
         value: function apprSidebar() {
             this.setSidebar();
+            if ($('#js-about-click').click()) {
+                console.log('aboutがクリックされました');
+                this.setState({ isAbout: true });
+            } else if ($('#js-skills-click').data("skills")) {
+                console.log('skillsがクリックされました');
+                this.setState({ isSkills: true });
+            }
         }
     }, {
         key: 'setSidebar',
-        value: function setSidebar() {}
+        value: function setSidebar() {
+            this.setState({ isSide: true });
+        }
     }, {
         key: 'render',
         value: function render() {
+            var sidebar = this.state.isSide ? _react2.default.createElement(
+                'section',
+                { id: 'js-sidebar', className: 'p-sidebar' },
+                _react2.default.createElement(
+                    'h1',
+                    { className: 'p-sidebar__title' },
+                    'MichiTaka\u2019s\xA0Portofolio'
+                ),
+                _react2.default.createElement(
+                    'ul',
+                    { className: 'p-sidebar__menu' },
+                    _react2.default.createElement(
+                        'li',
+                        { className: 'p-sidebar__link' },
+                        _react2.default.createElement(
+                            'a',
+                            { onClick: this.ApearContent, className: 'item p-sidebar__item', href: '' },
+                            'About'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'li',
+                        { className: 'p-sidebar__link' },
+                        _react2.default.createElement(
+                            'a',
+                            { className: 'item p-sidebar__item', href: '' },
+                            'Skills'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'li',
+                        { className: 'p-sidebar__link' },
+                        _react2.default.createElement(
+                            'a',
+                            { className: 'item p-sidebar__item', href: '' },
+                            'Works'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'li',
+                        { className: 'p-sidebar__link' },
+                        _react2.default.createElement(
+                            'a',
+                            { className: 'item p-sidebar__item', href: '' },
+                            'Blog'
+                        )
+                    )
+                ),
+                _react2.default.createElement(
+                    'div',
+                    { className: 'p-top__icon' },
+                    _react2.default.createElement(
+                        'a',
+                        { className: 'github-link', href: 'https://github.com/michitaka1996' },
+                        _react2.default.createElement('i', { className: 'fab fa-2x  fa-github' })
+                    )
+                ),
+                _react2.default.createElement(
+                    'footer',
+                    { className: 'p-sidebar__footer' },
+                    _react2.default.createElement(
+                        'p',
+                        null,
+                        'Since2019@Michitaka'
+                    )
+                )
+            ) : null;
+
+            var about = this.state.isAbout ? _react2.default.createElement(
+                'article',
+                { className: 'p-container' },
+                _react2.default.createElement(
+                    'h1',
+                    { className: 'p-container__title' },
+                    'ABOUT'
+                ),
+                _react2.default.createElement(
+                    'section',
+                    { className: 'p-container__contents' },
+                    _react2.default.createElement(
+                        'h2',
+                        { className: '' },
+                        'Me'
+                    ),
+                    _react2.default.createElement(
+                        'p',
+                        null,
+                        '\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB \u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB \u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB \u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB'
+                    )
+                ),
+                _react2.default.createElement(
+                    'section',
+                    { className: 'p-container__contents' },
+                    _react2.default.createElement(
+                        'h2',
+                        { className: '' },
+                        'Profile'
+                    ),
+                    _react2.default.createElement(
+                        'p',
+                        null,
+                        '\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB \u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB \u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB \u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB'
+                    )
+                ),
+                _react2.default.createElement(
+                    'section',
+                    { className: 'p-container__contents' },
+                    _react2.default.createElement(
+                        'h2',
+                        { className: '' },
+                        'Chronology'
+                    ),
+                    _react2.default.createElement(
+                        'p',
+                        null,
+                        '\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB \u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB \u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB \u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB'
+                    )
+                )
+            ) : null;
+
+            var skills = this.state.isSkills ? _react2.default.createElement(
+                'article',
+                { 'class': 'p-container' },
+                _react2.default.createElement(
+                    'h1',
+                    { 'class': 'p-container__title' },
+                    'SKILLS'
+                ),
+                _react2.default.createElement(
+                    'section',
+                    { 'class': 'p-container__contents' },
+                    _react2.default.createElement(
+                        'h2',
+                        { 'class': '' },
+                        'Backend'
+                    ),
+                    _react2.default.createElement(
+                        'p',
+                        null,
+                        '\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB \u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB \u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB \u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB'
+                    )
+                ),
+                _react2.default.createElement(
+                    'section',
+                    { 'class': 'p-container__contents' },
+                    _react2.default.createElement(
+                        'h2',
+                        { 'class': '' },
+                        'Frontend'
+                    ),
+                    _react2.default.createElement(
+                        'p',
+                        null,
+                        '\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB \u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB \u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB \u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB'
+                    )
+                ),
+                _react2.default.createElement(
+                    'section',
+                    { 'class': 'p-container__contents' },
+                    _react2.default.createElement(
+                        'h2',
+                        { 'class': '' },
+                        '\u306A\u308A\u305F\u3044\u30A8\u30F3\u30B8\u30CB\u30A2\u50CF'
+                    ),
+                    _react2.default.createElement(
+                        'p',
+                        null,
+                        '\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB \u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB \u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB \u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB'
+                    )
+                )
+            ) : null;
+
             return _react2.default.createElement(
                 'div',
                 null,
                 _react2.default.createElement(_Top2.default, { apprSidebar: this.apprSidebar }),
-                ','
+                ',',
+                sidebar,
+                ',',
+                about,
+                ',',
+                skills
             );
         }
     }]);
@@ -26145,79 +26337,35 @@ var Top = function (_React$Component) {
             this.props.side;
             console.log('サイドバーを呼ぶためのメソッドapprSidebarを呼びます');
             this.props.apprSidebar(); //このapprsidebarで、sidebarコンポーネントに渡す
+
+            if ($('#js-about-click').click()) {
+                console.log('ちんちん');
+            }
+            if ($('#js-skills-click').click()) {
+                console.log('いのうえ');
+            }
         }
     }, {
         key: 'render',
         value: function render() {
             console.log('この時のisTop', this.state.isTop);
             console.log('この時のisSide', this.state.isSide);
-            var sidebar = this.state.isSide ? _react2.default.createElement(
-                'section',
-                { id: 'js-sidebar', className: 'p-sidebar' },
-                _react2.default.createElement(
-                    'h1',
-                    { className: 'p-sidebar__title' },
-                    'MichiTaka\u2019s\xA0Portofolio'
-                ),
-                _react2.default.createElement(
-                    'ul',
-                    { className: 'p-sidebar__menu' },
-                    _react2.default.createElement(
-                        'li',
-                        { className: 'p-sidebar__link' },
-                        _react2.default.createElement(
-                            'a',
-                            { onClick: this.fadeApear, className: 'item p-sidebar__item', href: 'detailMoc.html' },
-                            'About'
-                        )
-                    ),
-                    _react2.default.createElement(
-                        'li',
-                        { className: 'p-sidebar__link' },
-                        _react2.default.createElement(
-                            'a',
-                            { onClick: this.fadeApear, className: 'item p-sidebar__item', href: '' },
-                            'Skills'
-                        )
-                    ),
-                    _react2.default.createElement(
-                        'li',
-                        { className: 'p-sidebar__link' },
-                        _react2.default.createElement(
-                            'a',
-                            { onClick: this.fadeApear, className: 'item p-sidebar__item', href: '' },
-                            'Works'
-                        )
-                    ),
-                    _react2.default.createElement(
-                        'li',
-                        { className: 'p-sidebar__link' },
-                        _react2.default.createElement(
-                            'a',
-                            { onClick: this.fadeApear, className: 'item p-sidebar__item', href: '' },
-                            'Blog'
-                        )
-                    )
-                ),
-                _react2.default.createElement(
-                    'div',
-                    { className: 'p-top__icon' },
-                    _react2.default.createElement(
-                        'a',
-                        { className: 'github-link', href: 'https://github.com/michitaka1996' },
-                        _react2.default.createElement('i', { className: 'fab fa-2x  fa-github' })
-                    )
-                ),
-                _react2.default.createElement(
-                    'footer',
-                    { className: 'p-sidebar__footer' },
-                    _react2.default.createElement(
-                        'p',
-                        null,
-                        'Since2019@Michitaka'
-                    )
-                )
-            ) : null;
+            // const sidebar = (this.state.isSide) ?
+            //      <section id="js-sidebar" className="p-sidebar">
+            //         <h1 className="p-sidebar__title">MichiTaka’s&nbsp;Portofolio</h1>
+            //         <ul className="p-sidebar__menu">
+            //             <li className="p-sidebar__link"><a onClick={this.fadeApear} className="item p-sidebar__item" href="detailMoc.html">About</a></li>
+            //             <li className="p-sidebar__link"><a onClick={this.fadeApear} className="item p-sidebar__item" href="">Skills</a></li>
+            //             <li className="p-sidebar__link"><a onClick={this.fadeApear} className="item p-sidebar__item" href="">Works</a></li>
+            //             <li className="p-sidebar__link"><a onClick={this.fadeApear} className="item p-sidebar__item" href="">Blog</a></li>
+            //         </ul>
+            //         <div className="p-top__icon">
+            //             <a className="github-link" href="https://github.com/michitaka1996"><i className="fab fa-2x  fa-github"></i></a>
+            //         </div>
+            //         <footer className="p-sidebar__footer">
+            //             <p>Since2019@Michitaka</p>
+            //         </footer>
+            //     </section> : null;
 
             return _react2.default.createElement(
                 'div',
@@ -26241,7 +26389,7 @@ var Top = function (_React$Component) {
                                 { className: 'item menu__item' },
                                 _react2.default.createElement(
                                     'a',
-                                    { id: 'js-menu-click', onClick: this.fadeApear, className: 'menu__link', href: '' },
+                                    { id: 'js-about-click', 'data-about': 'about', onClick: this.fadeApear, className: 'menu__link', href: '' },
                                     'About'
                                 )
                             ),
@@ -26250,7 +26398,7 @@ var Top = function (_React$Component) {
                                 { className: 'item menu__item' },
                                 _react2.default.createElement(
                                     'a',
-                                    { onClick: this.fadeApear, className: 'menu__link', href: '' },
+                                    { id: 'js-skills-click', 'data-skills': 'skills', onClick: this.fadeApear, className: 'menu__link', href: '' },
                                     'Skills'
                                 )
                             ),
@@ -26259,7 +26407,7 @@ var Top = function (_React$Component) {
                                 { className: 'item menu__item' },
                                 _react2.default.createElement(
                                     'a',
-                                    { onClick: this.fadeApear, className: 'menu__link', href: '' },
+                                    { id: 'js-works-click', onClick: this.fadeApear, className: 'menu__link', href: '' },
                                     'Works'
                                 )
                             ),
@@ -26268,7 +26416,7 @@ var Top = function (_React$Component) {
                                 { className: 'item menu__item' },
                                 _react2.default.createElement(
                                     'a',
-                                    { onClick: this.fadeApear, className: 'menu__link', href: '' },
+                                    { id: 'js-blog-click', onClick: this.fadeApear, className: 'menu__link', href: '' },
                                     'Blog'
                                 )
                             )
@@ -26292,8 +26440,7 @@ var Top = function (_React$Component) {
                             'Since2019@Michitaka'
                         )
                     )
-                ),
-                sidebar
+                )
             );
         }
     }]);
