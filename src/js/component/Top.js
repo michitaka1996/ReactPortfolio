@@ -95,7 +95,6 @@ export default class Top extends React.Component{
                     <p>Since2019@Michitaka</p>
                 </footer>
               </section>
-              {/* {sidebar} */}
             </div>
         );
     }

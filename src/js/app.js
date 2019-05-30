@@ -7,7 +7,6 @@ import _ from 'lodash';
 import { log } from 'util';
 
 
-//サイドバーのタイトルをクリックすると、アニメーションで
 
 
 class App extends React.Component{
@@ -40,48 +39,26 @@ class App extends React.Component{
     }
     prevTop() { //sidebarの非表示  sidebarでタイトル部分をおした時
         console.log('prevTop:サイドバーのタイトルをクリックしたのでtopを表示させ戻ります');
+
+        $('#js-top').css({ transform: 'translateY(0)' });
+
         const sidebar  = $('.p-sidebar__title').parent();   //サイドバー
         $(sidebar).attr('class', 'p-sidebar__hide');
-        $(sidebar).delay(2000).queue(function(){
+        $(sidebar).delay(500).queue(function(){
             $(this).hide();
         });
         
         const content = $('.p-container'); 　//コンテンツ
         $(content).attr('class', 'p-container__hide');  //idに変更させること
-        $(content).delay(2000).queue(function(){
+        $(content).delay(500).queue(function(){
             $(this).hide();
         });
 
-        $('#js-top').css({ transform: 'translateY(0)' });
-        // この時のisTop true
-        // この時のisSide false なので反転させる
-        // $(function () {
-        //     setTimeout(function () {
-        //     //   this.setState(prevState => ({
-        //     //     //   isTop: !prevState.isTop,
-        //     //     //   isSide: !prevState.isSide
-        //     //   }));
-        //     //   this.setState({ isTop: true, isSide: false });
-        //     }, 1000);
-        // });
-        // const top = $('.p-top'); //トップページ
-        // $(top).attr('class', 'p-top__show').show();
-
         this.overState();
 
-        // this.setState({ isTop: true, isSide: false, isAbout: false, isSkills: false, isWork: false, isBlog: false});
-        // this.setState(prevState => ({
-        //           isTop: !prevState.isTop,
-        //           isSide: !prevState.isSide
-        // }));
-        // this.setState({ isSide: false });
-        // this.setState({ isSide: false, isContent: false });
         console.log('prevTop: 現在のisTop', this.state.isTop);
         console.log('prevTop: 現在のisSide', this.state.isSide);
         console.log('prevTop: 現在のisContent', this.state.isContent);
-
-
-
     }
     overState() {
         this.setState({ isTop: true, isSide: false, isAbout: false, isSkills: false, isWork: false, isBlog: false}); 
@@ -98,7 +75,6 @@ class App extends React.Component{
         this.setState({ isTop: false });
         this.setState({isContent: true});
         this.setState({ isAbout: true });
-        // console.log('この時のisAbout', this.state.isAbout);
     }
     apprSkills() {
         console.log('skillsを呼びます');
@@ -173,116 +149,98 @@ class App extends React.Component{
                 <h1 className="p-container__title">ABOUT</h1>
                 <section className="p-container__contents">
                     <h2 className="">Me</h2>
-                    <p>サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-                        サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-                        サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-                        サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-                </p>
+                    <p>Name : Michitaka Inoue</p>
+                    <p>Age: 22</p>
                 </section>
                 <section className="p-container__contents">
                     <h2 className="">Profile</h2>
-                    <p>サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-                        サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-                        サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-                        サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-                </p>
-                </section>
-                <section className="p-container__contents">
-                    <h2 className="">Chronology</h2>
-                    <p>サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-                        サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-                        サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-                        サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-                </p>
+                    <p>2018年12月より初めてHTML,CSSを触り、2019年1月よりその他のプログラミングを学んでいます。</p>
+                    <p>趣味は筋トレや陸上競技(短距離)です。</p>
                 </section>
             </article> : null;
         
         const skills = (this.state.isContent && this.state.isSkills) ?
             <article id="js-article__skills" className="p-container">
-                <h1 className="p-container__title">SKILLS</h1>
+                <h1 className="p-container__title">SKILLS(学習しているもの)</h1>
                 <section className="p-container__contents">
                     <h2 className="">Backend</h2>
-                    <p>サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-                        サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-                        サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-                        サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-                    </p>
+                    <p>PHP/FuelPHP/WordPress</p>
                 </section>
                 <section className="p-container__contents">
                     <h2 className="">Frontend</h2>
-                    <p>サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-                        サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-                        サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-                        サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-                    </p>
+                    <p>HTML</p>
+                    <p>SCC/Sass/CSS設計</p>
+                    <p>jQuery/React.js</p>
+                    
                 </section>
                 <section className="p-container__contents">
                     <h2 className="">なりたいエンジニア像</h2>
-                    <p>サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-                        サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-                        サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-                        サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-                    </p>
+                    <p>全体的なビジネスの流れを把握したエンジニアになりたいと思っています。</p>
+                    <p>スピード感を大事にしたいです。</p>
                 </section>
             </article> : null;
         
         const works = (this.state.isContent && this.state.isWork) ?
-            <article id="js-article__work" className="p-container">
+            <article id="js-article__work" className="p-container p-work">
                 <h1 className="p-container__title">Works</h1>
-                 {/* <section class="p-container__contents">
-                    <h2 class="">Backend</h2>
-                    <p>サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
+                <section className="p-container__contents">
+                    <h2 className="workImg-title">フリマサービスのようなもの</h2>
+                    <div className="workImgs-container">
+                      <img  className="work-img" src="/images/shop.jpg"/>
+                    </div>
+                    <div className="workImgs-container">
+                      <img  className="work-img" src="/images/login.jpg"/>
+                    </div>
+                    <div className="workImgs-container">
+                      <img  className="work-img" src="/images/kanri.jpg"/>
+                    </div>
+                    {/* <p>サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
                         サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
                         サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
                         サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-                    </p>
+                    </p> */}
                 </section>
-                <section class="p-container__contents">
-                    <h2 class="">Frontend</h2>
-                    <p>サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-                        サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-                        サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-                        サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-                    </p>
+                 <section className="p-container__contents">
+                    <h2 className="workImg-title">ポートフォリオまとめ第１弾(レスポンシブ)</h2>
+                    <div   className="workImgs-container">
+                      <img className="work-img" src="/images/port1.jpg"/>
+                    </div>
                 </section>
-                <section class="p-container__contents">
-                    <h2 class="">なりたいエンジニア像</h2>
-                    <p>サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-                        サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-                        サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-                        サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-                    </p>
-                </section>  */}
-            </article> : null;
+                 <section className="p-container__contents">
+                    <h2 className="workImg-title">ToDo管理ツール(jquery)</h2>
+                    <div   className="workImgs-container">
+                      <img className="work-img" src="/images/jquery_todo.jpg"/>
+                    </div>
+                </section>
+                <section className="p-container__contents">
+                    <h2 className="workImg-title">WordPress自作テンプレート</h2>
+                    <div   className="workImgs-container">
+                      <img className="work-img" src="/images/wp.jpg"/>
+                    </div>
+                </section> 
+             </article>: null;
         
         const blog = (this.state.isContent && this.state.isBlog) ?
             <article id="js-article__blog" className="p-container">
                 <h1 className="p-container__title">BLOG</h1>
                 <section className="p-container__contents">
                     <h2 className="">Backend</h2>
-                    <p>サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-                        サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-                        サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-                        サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-                    </p>
-                </section>
-                <section className="p-container__contents">
-                    <h2 className="">Frontend</h2>
-                    <p>サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-                        サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-                        サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-                        サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-                    </p>
-                </section>
-                <section className="p-container__contents">
-                    <h2 className="">なりたいエンジニア像</h2>
-                    <p>サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-                        サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-                        サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-                        サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-                    </p>
+                    <h2><a href="https://webmichi.hatenadiary.jp/">たかブログ</a></h2>
+                    <p>日々の勉強で疑問に思ったことなどをかいています。</p>
+                    <p>WordPressの自作ブログを作っていく予定です</p>
                 </section>
             </article> : null;
+        
+       $(function () {
+           $('.work-img').hover(function () {
+                //ここにクラスをつけるh処理  
+                  //クラスをつけるとcssで
+                console.log('fafsa');
+                // $(this).attr('id', 'js-workImg__comment');
+            }, function () {
+                    console.log('inoue');
+         }); 
+        });
         
         return (
             <div>

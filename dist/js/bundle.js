@@ -1265,9 +1265,6 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 // import Content from './component/Content';
 
 
-//サイドバーのタイトルをクリックすると、アニメーションで
-
-
 var App = function (_React$Component) {
     _inherits(App, _React$Component);
 
@@ -1308,42 +1305,23 @@ var App = function (_React$Component) {
         value: function prevTop() {
             //sidebarの非表示  sidebarでタイトル部分をおした時
             console.log('prevTop:サイドバーのタイトルをクリックしたのでtopを表示させ戻ります');
+
+            $('#js-top').css({ transform: 'translateY(0)' });
+
             var sidebar = $('.p-sidebar__title').parent(); //サイドバー
             $(sidebar).attr('class', 'p-sidebar__hide');
-            $(sidebar).delay(2000).queue(function () {
+            $(sidebar).delay(500).queue(function () {
                 $(this).hide();
             });
 
             var content = $('.p-container'); //コンテンツ
             $(content).attr('class', 'p-container__hide'); //idに変更させること
-            $(content).delay(2000).queue(function () {
+            $(content).delay(500).queue(function () {
                 $(this).hide();
             });
 
-            $('#js-top').css({ transform: 'translateY(0)' });
-            // この時のisTop true
-            // この時のisSide false なので反転させる
-            // $(function () {
-            //     setTimeout(function () {
-            //     //   this.setState(prevState => ({
-            //     //     //   isTop: !prevState.isTop,
-            //     //     //   isSide: !prevState.isSide
-            //     //   }));
-            //     //   this.setState({ isTop: true, isSide: false });
-            //     }, 1000);
-            // });
-            // const top = $('.p-top'); //トップページ
-            // $(top).attr('class', 'p-top__show').show();
-
             this.overState();
 
-            // this.setState({ isTop: true, isSide: false, isAbout: false, isSkills: false, isWork: false, isBlog: false});
-            // this.setState(prevState => ({
-            //           isTop: !prevState.isTop,
-            //           isSide: !prevState.isSide
-            // }));
-            // this.setState({ isSide: false });
-            // this.setState({ isSide: false, isContent: false });
             console.log('prevTop: 現在のisTop', this.state.isTop);
             console.log('prevTop: 現在のisSide', this.state.isSide);
             console.log('prevTop: 現在のisContent', this.state.isContent);
@@ -1369,7 +1347,6 @@ var App = function (_React$Component) {
             this.setState({ isTop: false });
             this.setState({ isContent: true });
             this.setState({ isAbout: true });
-            // console.log('この時のisAbout', this.state.isAbout);
         }
     }, {
         key: 'apprSkills',
@@ -1521,7 +1498,12 @@ var App = function (_React$Component) {
                     _react2.default.createElement(
                         'p',
                         null,
-                        '\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB \u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB \u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB \u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB'
+                        'Name : Michitaka Inoue'
+                    ),
+                    _react2.default.createElement(
+                        'p',
+                        null,
+                        'Age: 22'
                     )
                 ),
                 _react2.default.createElement(
@@ -1535,21 +1517,12 @@ var App = function (_React$Component) {
                     _react2.default.createElement(
                         'p',
                         null,
-                        '\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB \u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB \u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB \u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB'
-                    )
-                ),
-                _react2.default.createElement(
-                    'section',
-                    { className: 'p-container__contents' },
-                    _react2.default.createElement(
-                        'h2',
-                        { className: '' },
-                        'Chronology'
+                        '2018\u5E7412\u6708\u3088\u308A\u521D\u3081\u3066HTML,CSS\u3092\u89E6\u308A\u30012019\u5E741\u6708\u3088\u308A\u305D\u306E\u4ED6\u306E\u30D7\u30ED\u30B0\u30E9\u30DF\u30F3\u30B0\u3092\u5B66\u3093\u3067\u3044\u307E\u3059\u3002'
                     ),
                     _react2.default.createElement(
                         'p',
                         null,
-                        '\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB \u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB \u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB \u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB'
+                        '\u8DA3\u5473\u306F\u7B4B\u30C8\u30EC\u3084\u9678\u4E0A\u7AF6\u6280(\u77ED\u8DDD\u96E2)\u3067\u3059\u3002'
                     )
                 )
             ) : null;
@@ -1560,7 +1533,7 @@ var App = function (_React$Component) {
                 _react2.default.createElement(
                     'h1',
                     { className: 'p-container__title' },
-                    'SKILLS'
+                    'SKILLS(\u5B66\u7FD2\u3057\u3066\u3044\u308B\u3082\u306E)'
                 ),
                 _react2.default.createElement(
                     'section',
@@ -1573,7 +1546,7 @@ var App = function (_React$Component) {
                     _react2.default.createElement(
                         'p',
                         null,
-                        '\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB \u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB \u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB \u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB'
+                        'PHP/FuelPHP/WordPress'
                     )
                 ),
                 _react2.default.createElement(
@@ -1587,7 +1560,17 @@ var App = function (_React$Component) {
                     _react2.default.createElement(
                         'p',
                         null,
-                        '\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB \u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB \u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB \u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB'
+                        'HTML'
+                    ),
+                    _react2.default.createElement(
+                        'p',
+                        null,
+                        'SCC/Sass/CSS\u8A2D\u8A08'
+                    ),
+                    _react2.default.createElement(
+                        'p',
+                        null,
+                        'jQuery/React.js'
                     )
                 ),
                 _react2.default.createElement(
@@ -1601,18 +1584,89 @@ var App = function (_React$Component) {
                     _react2.default.createElement(
                         'p',
                         null,
-                        '\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB \u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB \u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB \u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB'
+                        '\u5168\u4F53\u7684\u306A\u30D3\u30B8\u30CD\u30B9\u306E\u6D41\u308C\u3092\u628A\u63E1\u3057\u305F\u30A8\u30F3\u30B8\u30CB\u30A2\u306B\u306A\u308A\u305F\u3044\u3068\u601D\u3063\u3066\u3044\u307E\u3059\u3002'
+                    ),
+                    _react2.default.createElement(
+                        'p',
+                        null,
+                        '\u30B9\u30D4\u30FC\u30C9\u611F\u3092\u5927\u4E8B\u306B\u3057\u305F\u3044\u3067\u3059\u3002'
                     )
                 )
             ) : null;
 
             var works = this.state.isContent && this.state.isWork ? _react2.default.createElement(
                 'article',
-                { id: 'js-article__work', className: 'p-container' },
+                { id: 'js-article__work', className: 'p-container p-work' },
                 _react2.default.createElement(
                     'h1',
                     { className: 'p-container__title' },
                     'Works'
+                ),
+                _react2.default.createElement(
+                    'section',
+                    { className: 'p-container__contents' },
+                    _react2.default.createElement(
+                        'h2',
+                        { className: 'workImg-title' },
+                        '\u30D5\u30EA\u30DE\u30B5\u30FC\u30D3\u30B9\u306E\u3088\u3046\u306A\u3082\u306E'
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'workImgs-container' },
+                        _react2.default.createElement('img', { className: 'work-img', src: '/images/shop.jpg' })
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'workImgs-container' },
+                        _react2.default.createElement('img', { className: 'work-img', src: '/images/login.jpg' })
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'workImgs-container' },
+                        _react2.default.createElement('img', { className: 'work-img', src: '/images/kanri.jpg' })
+                    )
+                ),
+                _react2.default.createElement(
+                    'section',
+                    { className: 'p-container__contents' },
+                    _react2.default.createElement(
+                        'h2',
+                        { className: 'workImg-title' },
+                        '\u30DD\u30FC\u30C8\u30D5\u30A9\u30EA\u30AA\u307E\u3068\u3081\u7B2C\uFF11\u5F3E(\u30EC\u30B9\u30DD\u30F3\u30B7\u30D6)'
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'workImgs-container' },
+                        _react2.default.createElement('img', { className: 'work-img', src: '/images/port1.jpg' })
+                    )
+                ),
+                _react2.default.createElement(
+                    'section',
+                    { className: 'p-container__contents' },
+                    _react2.default.createElement(
+                        'h2',
+                        { className: 'workImg-title' },
+                        'ToDo\u7BA1\u7406\u30C4\u30FC\u30EB(jquery)'
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'workImgs-container' },
+                        _react2.default.createElement('img', { className: 'work-img', src: '/images/jquery_todo.jpg' })
+                    )
+                ),
+                _react2.default.createElement(
+                    'section',
+                    { className: 'p-container__contents' },
+                    _react2.default.createElement(
+                        'h2',
+                        { className: 'workImg-title' },
+                        'WordPress\u81EA\u4F5C\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8'
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'workImgs-container' },
+                        _react2.default.createElement('img', { className: 'work-img', src: '/images/wp.jpg' })
+                    )
                 )
             ) : null;
 
@@ -1633,40 +1687,37 @@ var App = function (_React$Component) {
                         'Backend'
                     ),
                     _react2.default.createElement(
-                        'p',
-                        null,
-                        '\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB \u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB \u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB \u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB'
-                    )
-                ),
-                _react2.default.createElement(
-                    'section',
-                    { className: 'p-container__contents' },
-                    _react2.default.createElement(
                         'h2',
-                        { className: '' },
-                        'Frontend'
+                        null,
+                        _react2.default.createElement(
+                            'a',
+                            { href: 'https://webmichi.hatenadiary.jp/' },
+                            '\u305F\u304B\u30D6\u30ED\u30B0'
+                        )
                     ),
                     _react2.default.createElement(
                         'p',
                         null,
-                        '\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB \u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB \u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB \u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB'
-                    )
-                ),
-                _react2.default.createElement(
-                    'section',
-                    { className: 'p-container__contents' },
-                    _react2.default.createElement(
-                        'h2',
-                        { className: '' },
-                        '\u306A\u308A\u305F\u3044\u30A8\u30F3\u30B8\u30CB\u30A2\u50CF'
+                        '\u65E5\u3005\u306E\u52C9\u5F37\u3067\u7591\u554F\u306B\u601D\u3063\u305F\u3053\u3068\u306A\u3069\u3092\u304B\u3044\u3066\u3044\u307E\u3059\u3002'
                     ),
                     _react2.default.createElement(
                         'p',
                         null,
-                        '\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB \u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB \u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB \u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB\u30B5\u30F3\u30D7\u30EB'
+                        'WordPress\u306E\u81EA\u4F5C\u30D6\u30ED\u30B0\u3092\u4F5C\u3063\u3066\u3044\u304F\u4E88\u5B9A\u3067\u3059'
                     )
                 )
             ) : null;
+
+            $(function () {
+                $('.work-img').hover(function () {
+                    //ここにクラスをつけるh処理  
+                    //クラスをつけるとcssで
+                    console.log('fafsa');
+                    // $(this).attr('id', 'js-workImg__comment');
+                }, function () {
+                    console.log('inoue');
+                });
+            });
 
             return _react2.default.createElement(
                 'div',
