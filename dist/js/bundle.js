@@ -1480,250 +1480,266 @@ var App = function (_React$Component) {
             ) : null;
 
             var about = this.state.isContent && this.state.isAbout ? _react2.default.createElement(
-                'article',
-                { id: 'js-article__about', className: 'p-container' },
+                'div',
+                { className: 'p-container__wrap' },
                 _react2.default.createElement(
-                    'h1',
-                    { className: 'p-container__title' },
-                    'ABOUT'
-                ),
-                _react2.default.createElement(
-                    'section',
-                    { className: 'p-container__contents' },
+                    'article',
+                    { id: 'js-article__about', className: 'p-container' },
                     _react2.default.createElement(
-                        'h2',
-                        { className: '' },
-                        'Me'
+                        'h1',
+                        { className: 'p-container__title' },
+                        'ABOUT'
                     ),
                     _react2.default.createElement(
-                        'p',
-                        null,
-                        'Name : Michitaka Inoue'
+                        'section',
+                        { className: 'p-container__contents' },
+                        _react2.default.createElement(
+                            'h2',
+                            { className: '' },
+                            'Me'
+                        ),
+                        _react2.default.createElement(
+                            'p',
+                            null,
+                            'Name : Michitaka Inoue'
+                        ),
+                        _react2.default.createElement(
+                            'p',
+                            null,
+                            'Age: 22'
+                        )
                     ),
                     _react2.default.createElement(
-                        'p',
-                        null,
-                        'Age: 22'
-                    )
-                ),
-                _react2.default.createElement(
-                    'section',
-                    { className: 'p-container__contents' },
-                    _react2.default.createElement(
-                        'h2',
-                        { className: '' },
-                        'Profile'
-                    ),
-                    _react2.default.createElement(
-                        'p',
-                        null,
-                        '2018\u5E7412\u6708\u3088\u308A\u521D\u3081\u3066HTML,CSS\u3092\u89E6\u308A\u30012019\u5E741\u6708\u3088\u308A\u305D\u306E\u4ED6\u306E\u30D7\u30ED\u30B0\u30E9\u30DF\u30F3\u30B0\u3092\u5B66\u3093\u3067\u3044\u307E\u3059\u3002'
-                    ),
-                    _react2.default.createElement(
-                        'p',
-                        null,
-                        '\u8DA3\u5473\u306F\u7B4B\u30C8\u30EC\u3084\u9678\u4E0A\u7AF6\u6280(\u77ED\u8DDD\u96E2)\u3067\u3059\u3002'
+                        'section',
+                        { className: 'p-container__contents' },
+                        _react2.default.createElement(
+                            'h2',
+                            { className: '' },
+                            'Profile'
+                        ),
+                        _react2.default.createElement(
+                            'p',
+                            null,
+                            '2018\u5E7412\u6708\u3088\u308A\u521D\u3081\u3066HTML,CSS\u3092\u89E6\u308A\u30012019\u5E741\u6708\u3088\u308A\u305D\u306E\u4ED6\u306E\u30D7\u30ED\u30B0\u30E9\u30DF\u30F3\u30B0\u3092\u5B66\u3093\u3067\u3044\u307E\u3059\u3002'
+                        ),
+                        _react2.default.createElement(
+                            'p',
+                            null,
+                            '\u8DA3\u5473\u306F\u7B4B\u30C8\u30EC\u3084\u9678\u4E0A\u7AF6\u6280(\u77ED\u8DDD\u96E2)\u3067\u3059\u3002'
+                        )
                     )
                 )
             ) : null;
 
             var skills = this.state.isContent && this.state.isSkills ? _react2.default.createElement(
-                'article',
-                { id: 'js-article__skills', className: 'p-container' },
+                'div',
+                { className: 'p-container__wrap' },
                 _react2.default.createElement(
-                    'h1',
-                    { className: 'p-container__title' },
-                    'SKILLS(\u5B66\u7FD2\u3057\u3066\u3044\u308B\u3082\u306E)'
-                ),
-                _react2.default.createElement(
-                    'section',
-                    { className: 'p-container__contents' },
+                    'article',
+                    { id: 'js-article__skills', className: 'p-container' },
                     _react2.default.createElement(
-                        'h2',
-                        { className: '' },
-                        'Backend'
+                        'h1',
+                        { className: 'p-container__title' },
+                        'SKILLS(\u5B66\u7FD2\u3057\u3066\u3044\u308B\u3082\u306E)'
                     ),
                     _react2.default.createElement(
-                        'p',
-                        null,
-                        'PHP/FuelPHP/WordPress'
-                    )
-                ),
-                _react2.default.createElement(
-                    'section',
-                    { className: 'p-container__contents' },
-                    _react2.default.createElement(
-                        'h2',
-                        { className: '' },
-                        'Frontend'
+                        'section',
+                        { className: 'p-container__contents' },
+                        _react2.default.createElement(
+                            'h2',
+                            { className: '' },
+                            'Backend'
+                        ),
+                        _react2.default.createElement(
+                            'p',
+                            null,
+                            'PHP/FuelPHP/WordPress'
+                        )
                     ),
                     _react2.default.createElement(
-                        'p',
-                        null,
-                        'HTML'
+                        'section',
+                        { className: 'p-container__contents' },
+                        _react2.default.createElement(
+                            'h2',
+                            { className: '' },
+                            'Frontend'
+                        ),
+                        _react2.default.createElement(
+                            'p',
+                            null,
+                            'HTML'
+                        ),
+                        _react2.default.createElement(
+                            'p',
+                            null,
+                            'SCC/Sass/CSS\u8A2D\u8A08'
+                        ),
+                        _react2.default.createElement(
+                            'p',
+                            null,
+                            'jQuery/React.js'
+                        )
                     ),
                     _react2.default.createElement(
-                        'p',
-                        null,
-                        'SCC/Sass/CSS\u8A2D\u8A08'
-                    ),
-                    _react2.default.createElement(
-                        'p',
-                        null,
-                        'jQuery/React.js'
-                    )
-                ),
-                _react2.default.createElement(
-                    'section',
-                    { className: 'p-container__contents' },
-                    _react2.default.createElement(
-                        'h2',
-                        { className: '' },
-                        '\u306A\u308A\u305F\u3044\u30A8\u30F3\u30B8\u30CB\u30A2\u50CF'
-                    ),
-                    _react2.default.createElement(
-                        'p',
-                        null,
-                        '\u5168\u4F53\u7684\u306A\u30D3\u30B8\u30CD\u30B9\u306E\u6D41\u308C\u3092\u628A\u63E1\u3057\u305F\u30A8\u30F3\u30B8\u30CB\u30A2\u306B\u306A\u308A\u305F\u3044\u3068\u601D\u3063\u3066\u3044\u307E\u3059\u3002'
-                    ),
-                    _react2.default.createElement(
-                        'p',
-                        null,
-                        '\u30B9\u30D4\u30FC\u30C9\u611F\u3092\u5927\u4E8B\u306B\u3057\u305F\u3044\u3067\u3059\u3002'
+                        'section',
+                        { className: 'p-container__contents' },
+                        _react2.default.createElement(
+                            'h2',
+                            { className: '' },
+                            '\u306A\u308A\u305F\u3044\u30A8\u30F3\u30B8\u30CB\u30A2\u50CF'
+                        ),
+                        _react2.default.createElement(
+                            'p',
+                            null,
+                            '\u5168\u4F53\u7684\u306A\u30D3\u30B8\u30CD\u30B9\u306E\u6D41\u308C\u3092\u628A\u63E1\u3057\u305F\u30A8\u30F3\u30B8\u30CB\u30A2\u306B\u306A\u308A\u305F\u3044\u3068\u601D\u3063\u3066\u3044\u307E\u3059\u3002'
+                        ),
+                        _react2.default.createElement(
+                            'p',
+                            null,
+                            '\u30B9\u30D4\u30FC\u30C9\u611F\u3092\u5927\u4E8B\u306B\u3057\u305F\u3044\u3067\u3059\u3002'
+                        )
                     )
                 )
             ) : null;
 
             var works = this.state.isContent && this.state.isWork ? _react2.default.createElement(
-                'article',
-                { id: 'js-article__work', className: 'p-container p-work' },
+                'div',
+                { className: 'p-container__wrap' },
                 _react2.default.createElement(
-                    'h1',
-                    { className: 'p-container__title' },
-                    'Works'
-                ),
-                _react2.default.createElement(
-                    'section',
-                    { className: 'p-container__contents' },
+                    'article',
+                    { id: 'js-article__work', className: 'p-container p-work' },
                     _react2.default.createElement(
-                        'h2',
-                        { className: 'workImg-title' },
-                        '\u30D5\u30EA\u30DE\u30B5\u30FC\u30D3\u30B9\u306E\u3088\u3046\u306A\u3082\u306E'
+                        'h1',
+                        { className: 'p-container__title' },
+                        'Works'
                     ),
                     _react2.default.createElement(
-                        'p',
-                        { className: 'workImg-comment' },
-                        '\u7C21\u5358\u306B\u30ED\u30B0\u30A4\u30F3\u3067\u304D\u308B\u65B9\u6CD5\u3068\u3057\u3066\u30AA\u30D6\u30B8\u30A7\u30AF\u30C8\u5FD7\u5411\u3068\u3057\u3066\u30ED\u30B0\u30A4\u30F3\u3067\u304D\u308B\u3088\u3046\u306B\u3057\u307E\u3057\u305F\u3002'
+                        'section',
+                        { className: 'p-container__contents' },
+                        _react2.default.createElement(
+                            'h2',
+                            { className: 'workImg-title' },
+                            '\u30D5\u30EA\u30DE\u30B5\u30FC\u30D3\u30B9\u306E\u3088\u3046\u306A\u3082\u306E'
+                        ),
+                        _react2.default.createElement(
+                            'p',
+                            { className: 'workImg-comment' },
+                            '\u7C21\u5358\u306B\u30ED\u30B0\u30A4\u30F3\u3067\u304D\u308B\u65B9\u6CD5\u3068\u3057\u3066\u30AA\u30D6\u30B8\u30A7\u30AF\u30C8\u6307\u5411\u3068\u3057\u3066\u30ED\u30B0\u30A4\u30F3\u3067\u304D\u308B\u3088\u3046\u306B\u3057\u307E\u3057\u305F\u3002'
+                        ),
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'workImgs-container' },
+                            _react2.default.createElement('img', { className: 'work-img', src: '/images/shop.jpg' })
+                        ),
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'workImgs-container' },
+                            _react2.default.createElement('img', { className: 'work-img', src: '/images/login.jpg' })
+                        ),
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'workImgs-container' },
+                            _react2.default.createElement('img', { className: 'work-img', src: '/images/kanri.jpg' })
+                        )
                     ),
                     _react2.default.createElement(
-                        'div',
-                        { className: 'workImgs-container' },
-                        _react2.default.createElement('img', { className: 'work-img', src: '/images/shop.jpg' })
+                        'section',
+                        { className: 'p-container__contents' },
+                        _react2.default.createElement(
+                            'h2',
+                            { className: 'workImg-title' },
+                            '\u30DD\u30FC\u30C8\u30D5\u30A9\u30EA\u30AA\u307E\u3068\u3081\u7B2C\uFF11\u5F3E(\u30EC\u30B9\u30DD\u30F3\u30B7\u30D6)'
+                        ),
+                        _react2.default.createElement(
+                            'p',
+                            { className: 'workImg-comment' },
+                            '\u30EC\u30B9\u30DD\u30F3\u30B7\u30D6\u30C7\u30B6\u30A4\u30F3\u306E\u7DF4\u7FD2\u3068\u3057\u3066\u4F5C\u308A\u307E\u3057\u305F\u3002'
+                        ),
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'workImgs-container' },
+                            _react2.default.createElement('img', { className: 'work-img', src: '/images/port1.jpg' })
+                        )
                     ),
                     _react2.default.createElement(
-                        'div',
-                        { className: 'workImgs-container' },
-                        _react2.default.createElement('img', { className: 'work-img', src: '/images/login.jpg' })
+                        'section',
+                        { className: 'p-container__contents' },
+                        _react2.default.createElement(
+                            'h2',
+                            { className: 'workImg-title' },
+                            'ToDo\u7BA1\u7406\u30C4\u30FC\u30EB(jquery)'
+                        ),
+                        _react2.default.createElement(
+                            'p',
+                            { className: 'workImg-comment' },
+                            'Ajax\u901A\u4FE1\u3092\u4F7F\u3044\u3001\u753B\u9762\u9077\u79FB\u3092\u305B\u305A\u306BDB\u3078\u60C5\u5831\u3092\u4FDD\u5B58\u3001\u7DE8\u96C6\u3001\u524A\u9664\u3092\u884C\u3048\u308B\u3088\u3046\u306B\u3057\u307E\u3057\u305F\u3002'
+                        ),
+                        _react2.default.createElement(
+                            'p',
+                            { className: 'workImg-comment' },
+                            'Backbone.js\u3067\u3082\u4F5C\u308A\u307E\u3057\u305F\u3002'
+                        ),
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'workImgs-container' },
+                            _react2.default.createElement('img', { className: 'work-img', src: '/images/jquery_todo.jpg' })
+                        )
                     ),
                     _react2.default.createElement(
-                        'div',
-                        { className: 'workImgs-container' },
-                        _react2.default.createElement('img', { className: 'work-img', src: '/images/kanri.jpg' })
-                    )
-                ),
-                _react2.default.createElement(
-                    'section',
-                    { className: 'p-container__contents' },
-                    _react2.default.createElement(
-                        'h2',
-                        { className: 'workImg-title' },
-                        '\u30DD\u30FC\u30C8\u30D5\u30A9\u30EA\u30AA\u307E\u3068\u3081\u7B2C\uFF11\u5F3E(\u30EC\u30B9\u30DD\u30F3\u30B7\u30D6)'
-                    ),
-                    _react2.default.createElement(
-                        'p',
-                        { className: 'workImg-comment' },
-                        '\u30EC\u30B9\u30DD\u30F3\u30B7\u30D6\u30C7\u30B6\u30A4\u30F3\u306E\u7DF4\u7FD2\u3068\u3057\u3066\u4F5C\u308A\u307E\u3057\u305F\u3002'
-                    ),
-                    _react2.default.createElement(
-                        'div',
-                        { className: 'workImgs-container' },
-                        _react2.default.createElement('img', { className: 'work-img', src: '/images/port1.jpg' })
-                    )
-                ),
-                _react2.default.createElement(
-                    'section',
-                    { className: 'p-container__contents' },
-                    _react2.default.createElement(
-                        'h2',
-                        { className: 'workImg-title' },
-                        'ToDo\u7BA1\u7406\u30C4\u30FC\u30EB(jquery)'
-                    ),
-                    _react2.default.createElement(
-                        'p',
-                        { className: 'workImg-comment' },
-                        'Ajax\u901A\u4FE1\u3092\u4F7F\u3044\u3001\u753B\u9762\u9077\u79FB\u3092\u305B\u305A\u306BDB\u3078\u60C5\u5831\u3092\u4FDD\u5B58\u3001\u7DE8\u96C6\u3001\u524A\u9664\u3092\u884C\u3048\u308B\u3088\u3046\u306B\u3057\u307E\u3057\u305F\u3002'
-                    ),
-                    _react2.default.createElement(
-                        'p',
-                        { className: 'workImg-comment' },
-                        'Backbone.js\u3067\u3082\u4F5C\u308A\u307E\u3057\u305F\u3002'
-                    ),
-                    _react2.default.createElement(
-                        'div',
-                        { className: 'workImgs-container' },
-                        _react2.default.createElement('img', { className: 'work-img', src: '/images/jquery_todo.jpg' })
-                    )
-                ),
-                _react2.default.createElement(
-                    'section',
-                    { className: 'p-container__contents' },
-                    _react2.default.createElement(
-                        'h2',
-                        { className: 'workImg-title' },
-                        'WordPress\u81EA\u4F5C\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8'
-                    ),
-                    _react2.default.createElement(
-                        'div',
-                        { className: 'workImgs-container' },
-                        _react2.default.createElement('img', { className: 'work-img', src: '/images/wp.jpg' })
+                        'section',
+                        { className: 'p-container__contents' },
+                        _react2.default.createElement(
+                            'h2',
+                            { className: 'workImg-title' },
+                            'WordPress\u81EA\u4F5C\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8'
+                        ),
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'workImgs-container' },
+                            _react2.default.createElement('img', { className: 'work-img', src: '/images/wp.jpg' })
+                        )
                     )
                 )
             ) : null;
 
             var blog = this.state.isContent && this.state.isBlog ? _react2.default.createElement(
-                'article',
-                { id: 'js-article__blog', className: 'p-container' },
+                'div',
+                { className: 'p-container__wrap' },
                 _react2.default.createElement(
-                    'h1',
-                    { className: 'p-container__title' },
-                    'BLOG'
-                ),
-                _react2.default.createElement(
-                    'section',
-                    { className: 'p-container__contents' },
+                    'article',
+                    { id: 'js-article__blog', className: 'p-container' },
                     _react2.default.createElement(
-                        'h2',
-                        { className: '' },
-                        'Backend'
+                        'h1',
+                        { className: 'p-container__title' },
+                        'BLOG'
                     ),
                     _react2.default.createElement(
-                        'h2',
-                        null,
+                        'section',
+                        { className: 'p-container__contents' },
                         _react2.default.createElement(
-                            'a',
-                            { href: 'https://webmichi.hatenadiary.jp/' },
-                            '\u305F\u304B\u30D6\u30ED\u30B0'
+                            'h2',
+                            { className: '' },
+                            'Backend'
+                        ),
+                        _react2.default.createElement(
+                            'h2',
+                            null,
+                            _react2.default.createElement(
+                                'a',
+                                { href: 'https://webmichi.hatenadiary.jp/' },
+                                '\u305F\u304B\u30D6\u30ED\u30B0'
+                            )
+                        ),
+                        _react2.default.createElement(
+                            'p',
+                            null,
+                            '\u65E5\u3005\u306E\u52C9\u5F37\u3067\u7591\u554F\u306B\u601D\u3063\u305F\u3053\u3068\u306A\u3069\u3092\u304B\u3044\u3066\u3044\u307E\u3059\u3002'
+                        ),
+                        _react2.default.createElement(
+                            'p',
+                            null,
+                            'WordPress\u306E\u81EA\u4F5C\u30D6\u30ED\u30B0\u3092\u4F5C\u3063\u3066\u3044\u304F\u4E88\u5B9A\u3067\u3059'
                         )
-                    ),
-                    _react2.default.createElement(
-                        'p',
-                        null,
-                        '\u65E5\u3005\u306E\u52C9\u5F37\u3067\u7591\u554F\u306B\u601D\u3063\u305F\u3053\u3068\u306A\u3069\u3092\u304B\u3044\u3066\u3044\u307E\u3059\u3002'
-                    ),
-                    _react2.default.createElement(
-                        'p',
-                        null,
-                        'WordPress\u306E\u81EA\u4F5C\u30D6\u30ED\u30B0\u3092\u4F5C\u3063\u3066\u3044\u304F\u4E88\u5B9A\u3067\u3059'
                     )
                 )
             ) : null;

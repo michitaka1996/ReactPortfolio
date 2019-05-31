@@ -145,6 +145,7 @@ class App extends React.Component{
             </section> : null;
 
         const about = (this.state.isContent && this.state.isAbout) ?
+           <div className="p-container__wrap">
             <article id="js-article__about" className="p-container">
                 <h1 className="p-container__title">ABOUT</h1>
                 <section className="p-container__contents">
@@ -157,9 +158,11 @@ class App extends React.Component{
                     <p>2018年12月より初めてHTML,CSSを触り、2019年1月よりその他のプログラミングを学んでいます。</p>
                     <p>趣味は筋トレや陸上競技(短距離)です。</p>
                 </section>
-            </article> : null;
+            </article>
+           </div>  : null;
         
         const skills = (this.state.isContent && this.state.isSkills) ?
+          <div className="p-container__wrap">
             <article id="js-article__skills" className="p-container">
                 <h1 className="p-container__title">SKILLS(学習しているもの)</h1>
                 <section className="p-container__contents">
@@ -178,14 +181,16 @@ class App extends React.Component{
                     <p>全体的なビジネスの流れを把握したエンジニアになりたいと思っています。</p>
                     <p>スピード感を大事にしたいです。</p>
                 </section>
-            </article> : null;
+            </article>
+           </div> : null;
         
         const works = (this.state.isContent && this.state.isWork) ?
+           <div className="p-container__wrap">
             <article id="js-article__work" className="p-container p-work">
                 <h1 className="p-container__title">Works</h1>
                 <section className="p-container__contents">
                     <h2 className="workImg-title">フリマサービスのようなもの</h2>
-                    <p className="workImg-comment">簡単にログインできる方法としてオブジェクト志向としてログインできるようにしました。</p>
+                    <p className="workImg-comment">簡単にログインできる方法としてオブジェクト指向としてログインできるようにしました。</p>
                     <div className="workImgs-container">
                       <img  className="work-img" src="/images/shop.jpg"/>
                     </div>
@@ -218,9 +223,11 @@ class App extends React.Component{
                       <img className="work-img" src="/images/wp.jpg"/>
                     </div>
                 </section> 
-             </article>: null;
-        
+             </article>
+            </div>: null;
+           
         const blog = (this.state.isContent && this.state.isBlog) ?
+           <div className="p-container__wrap">
             <article id="js-article__blog" className="p-container">
                 <h1 className="p-container__title">BLOG</h1>
                 <section className="p-container__contents">
@@ -229,7 +236,8 @@ class App extends React.Component{
                     <p>日々の勉強で疑問に思ったことなどをかいています。</p>
                     <p>WordPressの自作ブログを作っていく予定です</p>
                 </section>
-            </article> : null;
+            </article> 
+           </div> : null;
         
         
 
