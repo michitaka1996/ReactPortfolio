@@ -129,7 +129,7 @@ class App extends React.Component{
 
         const sidebar = (this.state.isContent && this.state.isSide) ?
             <section id="js-sidebar" className="p-sidebar">
-                <h1 onClick={this.prevTop} className="p-sidebar__title">MichiTaka’s&nbsp;Portofolio</h1>
+                <h1 onClick={this.prevTop} className="p-sidebar__title">MichiTaka’s&nbsp;Portfolio</h1>
                 <ul className="p-sidebar__menu">
                     <li className="p-sidebar__link"><a onClick={this.changeAbout} className="item p-sidebar__item" href="">About</a></li>
                     <li className="p-sidebar__link"><a onClick={this.changeSkills} className="item p-sidebar__item" href="">Skills</a></li>
@@ -192,13 +192,13 @@ class App extends React.Component{
                     <h2 className="workImg-title">フリマサービスのようなもの</h2>
                     <p className="workImg-comment">簡単にログインできる方法としてオブジェクト指向としてログインできるようにしました。</p>
                     <div className="workImgs-container">
-                      <img  className="work-img" src="/images/shop.jpg"/>
+                      <img  className="work-img" src="/images/shop.jpeg"/>
                     </div>
                     <div className="workImgs-container">
-                      <img  className="work-img" src="/images/login.jpg"/>
+                      <img  className="work-img" src="/images/login.jpeg"/>
                     </div>
                     <div className="workImgs-container">
-                      <img  className="work-img" src="/images/kanri.jpg"/>
+                      <img  className="work-img" src="/images/kanri.jpeg"/>
                     </div>
                 </section>
 
@@ -206,7 +206,7 @@ class App extends React.Component{
                     <h2 className="workImg-title">ポートフォリオまとめ第１弾(レスポンシブ)</h2>
                     <p className="workImg-comment">レスポンシブデザインの練習として作りました。</p>
                     <div   className="workImgs-container">
-                      <img className="work-img" src="/images/port1.jpg"/>
+                      <img className="work-img" src="/images/port1.jpeg"/>
                     </div>
                 </section>
                  <section className="p-container__contents">
@@ -214,13 +214,13 @@ class App extends React.Component{
                     <p className="workImg-comment">Ajax通信を使い、画面遷移をせずにDBへ情報を保存、編集、削除を行えるようにしました。</p>
                     <p className="workImg-comment">Backbone.jsでも作りました。</p>
                     <div className="workImgs-container">
-                      <img className="work-img" src="/images/jquery_todo.jpg"/>
+                      <img className="work-img" src="/images/jquery_todo.jpeg"/>
                     </div>
                 </section>
                 <section className="p-container__contents">
                     <h2 className="workImg-title">WordPress自作テンプレート</h2>
                     <div className="workImgs-container">
-                      <img className="work-img" src="/images/wp.jpg"/>
+                      <img className="work-img" src="/images/wp.jpeg"/>
                     </div>
                 </section> 
              </article>
