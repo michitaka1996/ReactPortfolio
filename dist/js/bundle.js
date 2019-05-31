@@ -1629,17 +1629,17 @@ var App = function (_React$Component) {
                         _react2.default.createElement(
                             'div',
                             { className: 'workImgs-container' },
-                            _react2.default.createElement('img', { className: 'work-img', src: '/images/shop.jpeg' })
+                            _react2.default.createElement('img', { className: 'work-img', src: '/images/shop.png' })
                         ),
                         _react2.default.createElement(
                             'div',
                             { className: 'workImgs-container' },
-                            _react2.default.createElement('img', { className: 'work-img', src: '/images/login.jpeg' })
+                            _react2.default.createElement('img', { className: 'work-img', src: '/images/login.png' })
                         ),
                         _react2.default.createElement(
                             'div',
                             { className: 'workImgs-container' },
-                            _react2.default.createElement('img', { className: 'work-img', src: '/images/kanri.jpeg' })
+                            _react2.default.createElement('img', { className: 'work-img', src: '/images/kanri.png' })
                         )
                     ),
                     _react2.default.createElement(
@@ -1658,7 +1658,7 @@ var App = function (_React$Component) {
                         _react2.default.createElement(
                             'div',
                             { className: 'workImgs-container' },
-                            _react2.default.createElement('img', { className: 'work-img', src: '/images/port1.jpeg' })
+                            _react2.default.createElement('img', { className: 'work-img', src: '/images/port1.png' })
                         )
                     ),
                     _react2.default.createElement(
@@ -1682,7 +1682,7 @@ var App = function (_React$Component) {
                         _react2.default.createElement(
                             'div',
                             { className: 'workImgs-container' },
-                            _react2.default.createElement('img', { className: 'work-img', src: '/images/jquery_todo.jpeg' })
+                            _react2.default.createElement('img', { className: 'work-img', src: '/images/jquery_todo.png' })
                         )
                     ),
                     _react2.default.createElement(
@@ -1696,7 +1696,7 @@ var App = function (_React$Component) {
                         _react2.default.createElement(
                             'div',
                             { className: 'workImgs-container' },
-                            _react2.default.createElement('img', { className: 'work-img', src: '/images/wp.jpeg' })
+                            _react2.default.createElement('img', { className: 'work-img', src: '/images/wp.png' })
                         )
                     )
                 )

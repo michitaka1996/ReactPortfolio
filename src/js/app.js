@@ -192,13 +192,13 @@ class App extends React.Component{
                     <h2 className="workImg-title">フリマサービスのようなもの</h2>
                     <p className="workImg-comment">Sessionを用いた通常のログインの他に、簡易なゲームでログインできるようにしました。</p>
                     <div className="workImgs-container">
-                      <img  className="work-img" src="/images/shop.jpeg"/>
+                      <img  className="work-img" src="/images/shop.png"/>
                     </div>
                     <div className="workImgs-container">
-                      <img  className="work-img" src="/images/login.jpeg"/>
+                      <img  className="work-img" src="/images/login.png"/>
                     </div>
                     <div className="workImgs-container">
-                      <img  className="work-img" src="/images/kanri.jpeg"/>
+                      <img  className="work-img" src="/images/kanri.png"/>
                     </div>
                 </section>
 
@@ -206,7 +206,7 @@ class App extends React.Component{
                     <h2 className="workImg-title">ポートフォリオまとめ第１弾(レスポンシブ)</h2>
                     <p className="workImg-comment">レスポンシブデザインの練習として作りました。</p>
                     <div   className="workImgs-container">
-                      <img className="work-img" src="/images/port1.jpeg"/>
+                      <img className="work-img" src="/images/port1.png"/>
                     </div>
                 </section>
                  <section className="p-container__contents">
@@ -214,13 +214,13 @@ class App extends React.Component{
                     <p className="workImg-comment">Ajax通信を用いて、画面遷移をせずにDBにタスク情報を保存、編集、削除を行えるようにしました。</p>
                     <p className="workImg-comment">Backbone.jsでも作りました。</p>
                     <div className="workImgs-container">
-                      <img className="work-img" src="/images/jquery_todo.jpeg"/>
+                      <img className="work-img" src="/images/jquery_todo.png"/>
                     </div>
                 </section>
                 <section className="p-container__contents">
                     <h2 className="workImg-title">WordPress自作テンプレート</h2>
                     <div className="workImgs-container">
-                      <img className="work-img" src="/images/wp.jpeg"/>
+                      <img className="work-img" src="/images/wp.png"/>
                     </div>
                 </section> 
              </article>
