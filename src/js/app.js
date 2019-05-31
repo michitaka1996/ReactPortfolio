@@ -155,8 +155,8 @@ class App extends React.Component{
                 </section>
                 <section className="p-container__contents">
                     <h2 className="">Profile</h2>
-                    <p>2018年12月より初めてHTML,CSSを触り、2019年1月よりその他のプログラミングを学んでいます。</p>
-                    <p>趣味は筋トレや陸上競技(短距離)です。</p>
+                    <p>2018年12月より初めてHTML,CSSを触り、2019年1月よりその他のWebプログラミングを学んでいます。</p>
+                    <p>趣味は筋トレと陸上競技(短距離)です。</p>
                 </section>
             </article>
            </div>  : null;
@@ -172,14 +172,14 @@ class App extends React.Component{
                 <section className="p-container__contents">
                     <h2 className="">Frontend</h2>
                     <p>HTML</p>
-                    <p>SCC/Sass/CSS設計</p>
+                    <p>CSS/Sass</p>
                     <p>jQuery/React.js</p>
                     
                 </section>
                 <section className="p-container__contents">
                     <h2 className="">なりたいエンジニア像</h2>
-                    <p>全体的なビジネスの流れを把握したエンジニアになりたいと思っています。</p>
-                    <p>スピード感を大事にしたいです。</p>
+                    <p>全体的なビジネスの流れを経験したエンジニアになりたいと思っています。</p>
+                    <p>スピード感を大事にしていきたいです。</p>
                 </section>
             </article>
            </div> : null;
@@ -190,7 +190,7 @@ class App extends React.Component{
                 <h1 className="p-container__title">Works</h1>
                 <section className="p-container__contents">
                     <h2 className="workImg-title">フリマサービスのようなもの</h2>
-                    <p className="workImg-comment">簡単にログインできる方法としてオブジェクト指向としてログインできるようにしました。</p>
+                    <p className="workImg-comment">Sessionを用いた通常のログインの他に、簡易なゲームでログインできるようにしました。</p>
                     <div className="workImgs-container">
                       <img  className="work-img" src="/images/shop.jpeg"/>
                     </div>
@@ -211,7 +211,7 @@ class App extends React.Component{
                 </section>
                  <section className="p-container__contents">
                     <h2 className="workImg-title">ToDo管理ツール(jquery)</h2>
-                    <p className="workImg-comment">Ajax通信を使い、画面遷移をせずにDBへ情報を保存、編集、削除を行えるようにしました。</p>
+                    <p className="workImg-comment">Ajax通信を用いて、画面遷移をせずにDBにタスク情報を保存、編集、削除を行えるようにしました。</p>
                     <p className="workImg-comment">Backbone.jsでも作りました。</p>
                     <div className="workImgs-container">
                       <img className="work-img" src="/images/jquery_todo.jpeg"/>
@@ -233,7 +233,7 @@ class App extends React.Component{
                 <section className="p-container__contents">
                     <h2 className="">Backend</h2>
                     <h2><a href="https://webmichi.hatenadiary.jp/">たかブログ</a></h2>
-                    <p>日々の勉強で疑問に思ったことなどをかいています。</p>
+                    <p>日々の勉強で疑問に思ったことを噛み砕いて書いてます。</p>
                     <p>WordPressの自作ブログを作っていく予定です</p>
                 </section>
             </article> 

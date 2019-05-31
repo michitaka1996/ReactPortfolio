@@ -1520,12 +1520,12 @@ var App = function (_React$Component) {
                         _react2.default.createElement(
                             'p',
                             null,
-                            '2018\u5E7412\u6708\u3088\u308A\u521D\u3081\u3066HTML,CSS\u3092\u89E6\u308A\u30012019\u5E741\u6708\u3088\u308A\u305D\u306E\u4ED6\u306E\u30D7\u30ED\u30B0\u30E9\u30DF\u30F3\u30B0\u3092\u5B66\u3093\u3067\u3044\u307E\u3059\u3002'
+                            '2018\u5E7412\u6708\u3088\u308A\u521D\u3081\u3066HTML,CSS\u3092\u89E6\u308A\u30012019\u5E741\u6708\u3088\u308A\u305D\u306E\u4ED6\u306EWeb\u30D7\u30ED\u30B0\u30E9\u30DF\u30F3\u30B0\u3092\u5B66\u3093\u3067\u3044\u307E\u3059\u3002'
                         ),
                         _react2.default.createElement(
                             'p',
                             null,
-                            '\u8DA3\u5473\u306F\u7B4B\u30C8\u30EC\u3084\u9678\u4E0A\u7AF6\u6280(\u77ED\u8DDD\u96E2)\u3067\u3059\u3002'
+                            '\u8DA3\u5473\u306F\u7B4B\u30C8\u30EC\u3068\u9678\u4E0A\u7AF6\u6280(\u77ED\u8DDD\u96E2)\u3067\u3059\u3002'
                         )
                     )
                 )
@@ -1572,7 +1572,7 @@ var App = function (_React$Component) {
                         _react2.default.createElement(
                             'p',
                             null,
-                            'SCC/Sass/CSS\u8A2D\u8A08'
+                            'CSS/Sass'
                         ),
                         _react2.default.createElement(
                             'p',
@@ -1591,12 +1591,12 @@ var App = function (_React$Component) {
                         _react2.default.createElement(
                             'p',
                             null,
-                            '\u5168\u4F53\u7684\u306A\u30D3\u30B8\u30CD\u30B9\u306E\u6D41\u308C\u3092\u628A\u63E1\u3057\u305F\u30A8\u30F3\u30B8\u30CB\u30A2\u306B\u306A\u308A\u305F\u3044\u3068\u601D\u3063\u3066\u3044\u307E\u3059\u3002'
+                            '\u5168\u4F53\u7684\u306A\u30D3\u30B8\u30CD\u30B9\u306E\u6D41\u308C\u3092\u7D4C\u9A13\u3057\u305F\u30A8\u30F3\u30B8\u30CB\u30A2\u306B\u306A\u308A\u305F\u3044\u3068\u601D\u3063\u3066\u3044\u307E\u3059\u3002'
                         ),
                         _react2.default.createElement(
                             'p',
                             null,
-                            '\u30B9\u30D4\u30FC\u30C9\u611F\u3092\u5927\u4E8B\u306B\u3057\u305F\u3044\u3067\u3059\u3002'
+                            '\u30B9\u30D4\u30FC\u30C9\u611F\u3092\u5927\u4E8B\u306B\u3057\u3066\u3044\u304D\u305F\u3044\u3067\u3059\u3002'
                         )
                     )
                 )
@@ -1624,7 +1624,7 @@ var App = function (_React$Component) {
                         _react2.default.createElement(
                             'p',
                             { className: 'workImg-comment' },
-                            '\u7C21\u5358\u306B\u30ED\u30B0\u30A4\u30F3\u3067\u304D\u308B\u65B9\u6CD5\u3068\u3057\u3066\u30AA\u30D6\u30B8\u30A7\u30AF\u30C8\u6307\u5411\u3068\u3057\u3066\u30ED\u30B0\u30A4\u30F3\u3067\u304D\u308B\u3088\u3046\u306B\u3057\u307E\u3057\u305F\u3002'
+                            'Session\u3092\u7528\u3044\u305F\u901A\u5E38\u306E\u30ED\u30B0\u30A4\u30F3\u306E\u4ED6\u306B\u3001\u7C21\u6613\u306A\u30B2\u30FC\u30E0\u3067\u30ED\u30B0\u30A4\u30F3\u3067\u304D\u308B\u3088\u3046\u306B\u3057\u307E\u3057\u305F\u3002'
                         ),
                         _react2.default.createElement(
                             'div',
@@ -1672,7 +1672,7 @@ var App = function (_React$Component) {
                         _react2.default.createElement(
                             'p',
                             { className: 'workImg-comment' },
-                            'Ajax\u901A\u4FE1\u3092\u4F7F\u3044\u3001\u753B\u9762\u9077\u79FB\u3092\u305B\u305A\u306BDB\u3078\u60C5\u5831\u3092\u4FDD\u5B58\u3001\u7DE8\u96C6\u3001\u524A\u9664\u3092\u884C\u3048\u308B\u3088\u3046\u306B\u3057\u307E\u3057\u305F\u3002'
+                            'Ajax\u901A\u4FE1\u3092\u7528\u3044\u3066\u3001\u753B\u9762\u9077\u79FB\u3092\u305B\u305A\u306BDB\u306B\u30BF\u30B9\u30AF\u60C5\u5831\u3092\u4FDD\u5B58\u3001\u7DE8\u96C6\u3001\u524A\u9664\u3092\u884C\u3048\u308B\u3088\u3046\u306B\u3057\u307E\u3057\u305F\u3002'
                         ),
                         _react2.default.createElement(
                             'p',
@@ -1733,7 +1733,7 @@ var App = function (_React$Component) {
                         _react2.default.createElement(
                             'p',
                             null,
-                            '\u65E5\u3005\u306E\u52C9\u5F37\u3067\u7591\u554F\u306B\u601D\u3063\u305F\u3053\u3068\u306A\u3069\u3092\u304B\u3044\u3066\u3044\u307E\u3059\u3002'
+                            '\u65E5\u3005\u306E\u52C9\u5F37\u3067\u7591\u554F\u306B\u601D\u3063\u305F\u3053\u3068\u3092\u565B\u307F\u7815\u3044\u3066\u66F8\u3044\u3066\u307E\u3059\u3002'
                         ),
                         _react2.default.createElement(
                             'p',
