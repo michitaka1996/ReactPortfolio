@@ -91,9 +91,7 @@ Top
 .p-top {
   font-size: 28px;
   color: #333333;
-  position: absolute;
-  top: 25%;
-  left: 35%;
+  margin-top: 25%;
   transform: translateY(0);
   transition: transform 4s;
   animation: fadeIn 7s ease 2s 1 normal;
@@ -167,9 +165,7 @@ Top
 .p-top__show {
   font-size: 28px;
   color: #333333;
-  position: absolute;
-  top: 25%;
-  left: 35%;
+  margin-top: 25%;
   animation-duration: 0.1s;
   animation-name: UptoBottom;
   animation-iteration-count: none; }
@@ -265,6 +261,7 @@ article
   width: 80%;
   height: 100%;
   position: absolute;
+  top: 0;
   left: 20%; }
 
 .p-container {
@@ -274,7 +271,7 @@ article
   border-radius: 10px;
   box-sizing: border-box;
   padding: 80px;
-  margin: 0 auto 80px auto;
+  margin: 10% auto 80px auto;
   animation-duration: 2.5s;
   animation-name: BottomtoUp;
   animation-iteration-count: none; }

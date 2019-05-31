@@ -5,9 +5,7 @@ Top
 .p-top {
     font-size: $font-size-xxl;
     color: $font-color_default;
-    position: absolute;
-    top: 25%;
-    left: 35%;
+    margin-top: 25%;
     transform: translateY(0);
     transition: transform 4s;
 
@@ -113,9 +111,10 @@ Top
 .p-top__show {
     font-size: $font-size-xxl;
     color: $font-color_default;
-    position: absolute;
-    top: 25%;
-    left: 35%;
+    // position: absolute;
+    // top: 25%;
+    // left: 35%;
+    margin-top: 25%;
     animation-duration: 0.1s;
     animation-name: UptoBottom;
     animation-iteration-count: none;
