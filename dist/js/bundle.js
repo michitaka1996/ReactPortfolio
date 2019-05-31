@@ -1611,6 +1611,11 @@ var App = function (_React$Component) {
                         '\u30D5\u30EA\u30DE\u30B5\u30FC\u30D3\u30B9\u306E\u3088\u3046\u306A\u3082\u306E'
                     ),
                     _react2.default.createElement(
+                        'p',
+                        { className: 'workImg-comment' },
+                        '\u7C21\u5358\u306B\u30ED\u30B0\u30A4\u30F3\u3067\u304D\u308B\u65B9\u6CD5\u3068\u3057\u3066\u30AA\u30D6\u30B8\u30A7\u30AF\u30C8\u5FD7\u5411\u3068\u3057\u3066\u30ED\u30B0\u30A4\u30F3\u3067\u304D\u308B\u3088\u3046\u306B\u3057\u307E\u3057\u305F\u3002'
+                    ),
+                    _react2.default.createElement(
                         'div',
                         { className: 'workImgs-container' },
                         _react2.default.createElement('img', { className: 'work-img', src: '/images/shop.jpg' })
@@ -1635,6 +1640,11 @@ var App = function (_React$Component) {
                         '\u30DD\u30FC\u30C8\u30D5\u30A9\u30EA\u30AA\u307E\u3068\u3081\u7B2C\uFF11\u5F3E(\u30EC\u30B9\u30DD\u30F3\u30B7\u30D6)'
                     ),
                     _react2.default.createElement(
+                        'p',
+                        { className: 'workImg-comment' },
+                        '\u30EC\u30B9\u30DD\u30F3\u30B7\u30D6\u30C7\u30B6\u30A4\u30F3\u306E\u7DF4\u7FD2\u3068\u3057\u3066\u4F5C\u308A\u307E\u3057\u305F\u3002'
+                    ),
+                    _react2.default.createElement(
                         'div',
                         { className: 'workImgs-container' },
                         _react2.default.createElement('img', { className: 'work-img', src: '/images/port1.jpg' })
@@ -1647,6 +1657,16 @@ var App = function (_React$Component) {
                         'h2',
                         { className: 'workImg-title' },
                         'ToDo\u7BA1\u7406\u30C4\u30FC\u30EB(jquery)'
+                    ),
+                    _react2.default.createElement(
+                        'p',
+                        { className: 'workImg-comment' },
+                        'Ajax\u901A\u4FE1\u3092\u4F7F\u3044\u3001\u753B\u9762\u9077\u79FB\u3092\u305B\u305A\u306BDB\u3078\u60C5\u5831\u3092\u4FDD\u5B58\u3001\u7DE8\u96C6\u3001\u524A\u9664\u3092\u884C\u3048\u308B\u3088\u3046\u306B\u3057\u307E\u3057\u305F\u3002'
+                    ),
+                    _react2.default.createElement(
+                        'p',
+                        { className: 'workImg-comment' },
+                        'Backbone.js\u3067\u3082\u4F5C\u308A\u307E\u3057\u305F\u3002'
                     ),
                     _react2.default.createElement(
                         'div',
@@ -1707,17 +1727,6 @@ var App = function (_React$Component) {
                     )
                 )
             ) : null;
-
-            $(function () {
-                $('.work-img').hover(function () {
-                    //ここにクラスをつけるh処理  
-                    //クラスをつけるとcssで
-                    console.log('fafsa');
-                    // $(this).attr('id', 'js-workImg__comment');
-                }, function () {
-                    console.log('inoue');
-                });
-            });
 
             return _react2.default.createElement(
                 'div',

@@ -185,6 +185,7 @@ class App extends React.Component{
                 <h1 className="p-container__title">Works</h1>
                 <section className="p-container__contents">
                     <h2 className="workImg-title">フリマサービスのようなもの</h2>
+                    <p className="workImg-comment">簡単にログインできる方法としてオブジェクト志向としてログインできるようにしました。</p>
                     <div className="workImgs-container">
                       <img  className="work-img" src="/images/shop.jpg"/>
                     </div>
@@ -194,27 +195,26 @@ class App extends React.Component{
                     <div className="workImgs-container">
                       <img  className="work-img" src="/images/kanri.jpg"/>
                     </div>
-                    {/* <p>サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-                        サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-                        サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-                        サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-                    </p> */}
                 </section>
+
                  <section className="p-container__contents">
                     <h2 className="workImg-title">ポートフォリオまとめ第１弾(レスポンシブ)</h2>
+                    <p className="workImg-comment">レスポンシブデザインの練習として作りました。</p>
                     <div   className="workImgs-container">
                       <img className="work-img" src="/images/port1.jpg"/>
                     </div>
                 </section>
                  <section className="p-container__contents">
                     <h2 className="workImg-title">ToDo管理ツール(jquery)</h2>
-                    <div   className="workImgs-container">
+                    <p className="workImg-comment">Ajax通信を使い、画面遷移をせずにDBへ情報を保存、編集、削除を行えるようにしました。</p>
+                    <p className="workImg-comment">Backbone.jsでも作りました。</p>
+                    <div className="workImgs-container">
                       <img className="work-img" src="/images/jquery_todo.jpg"/>
                     </div>
                 </section>
                 <section className="p-container__contents">
                     <h2 className="workImg-title">WordPress自作テンプレート</h2>
-                    <div   className="workImgs-container">
+                    <div className="workImgs-container">
                       <img className="work-img" src="/images/wp.jpg"/>
                     </div>
                 </section> 
@@ -231,16 +231,9 @@ class App extends React.Component{
                 </section>
             </article> : null;
         
-       $(function () {
-           $('.work-img').hover(function () {
-                //ここにクラスをつけるh処理  
-                  //クラスをつけるとcssで
-                console.log('fafsa');
-                // $(this).attr('id', 'js-workImg__comment');
-            }, function () {
-                    console.log('inoue');
-         }); 
-        });
+        
+
+
         
         return (
             <div>

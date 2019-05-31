@@ -320,23 +320,17 @@ article
 .workImg-title {
   padding-left: 60px; }
 
+.workImg-comment {
+  margin-bottom: 10px;
+  padding-left: 80px; }
+
 .workImgs-container {
   width: 60%;
   height: auto;
-  margin: 0 auto; }
-  .workImgs-container :hover {
-    cursor: pointer;
-    -webkit-filter: grayscale(100%) brightness(50%);
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden; }
+  margin: 0 auto;
+  text-align: center;
+  position: relative; }
   .workImgs-container .work-img {
     width: 100%;
     height: 100%;
     border-radius: 10px; }
-
-.workImgs-container:hover:after {
-  color: white;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); }
